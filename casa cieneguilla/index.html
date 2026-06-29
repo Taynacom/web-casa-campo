@@ -33,9 +33,9 @@
     <!-- FAVICON -->
     <link rel="icon" type="image/jpeg" href="images/vista-previa.webp">
 
-    <!-- Tailwind y Iconos -->
-    <script defer src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tailwind y Iconos (SIN DEFER para asegurar estabilidad visual inmediata) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         /* Animaciones estables de interfaz */
@@ -102,7 +102,6 @@
             </div>
             <div class="flex items-center gap-4 whitespace-nowrap">
                 <button onclick="gestionarCookies(false)" class="text-stone-400 hover:text-white text-sm font-medium transition-colors underline" aria-label="Rechazar cookies">Rechazar</button>
-                <!-- Ajuste contraste botón -->
                 <button onclick="gestionarCookies(true)" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded-xl transition-colors shadow-lg" aria-label="Aceptar cookies">Aceptar cookies</button>
             </div>
         </div>
@@ -132,8 +131,8 @@
     <header class="relative h-[85vh] flex items-center justify-center bg-[#3E2723] overflow-hidden">
         <picture class="absolute inset-0 w-full h-full">
             <source media="(max-width: 768px)" srcset="images/foto-principal-movil.webp">
-            <!-- fetchpriority="high" optimiza el LCP para SEO -->
-            <img src="images/foto-principal.webp" alt="Casa de Campo en Cieneguilla" fetchpriority="high" class="w-full h-full object-cover opacity-75">
+            <!-- Imagen con width y height fijos para evitar CLS -->
+            <img src="images/foto-principal.webp" alt="Casa de Campo en Cieneguilla" width="1920" height="1080" fetchpriority="high" class="w-full h-full object-cover opacity-75">
         </picture>
         <div class="absolute inset-0 bg-black/40"></div>
 
@@ -147,7 +146,6 @@
                 Sin intermediarios ni comisiones ocultas. Vive una escapada de ensueño y disfruta de un espacio diseñado para tu total desconexión.
             </p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <!-- Ajuste contraste botón principal -->
                 <a href="https://wa.me/51959571464?text=Hola,%20solicito%20informaci%C3%B3n%20y%20disponibilidad%20para%20la%20casa%20de%20campo" 
                    target="_blank"
                    class="animacion-latido bg-amber-700 hover:bg-amber-800 text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(180,83,9,0.5)] transition-colors text-center flex items-center justify-center gap-3">
@@ -361,9 +359,8 @@
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <!-- Ajuste de imágenes responsivas -->
                     <div onclick="abrirGaleria('galeria_interiores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-interiores-1.webp" srcset="images/galeria-interiores-1-small.webp 600w, images/galeria-interiores-1.webp 1200w" sizes="(max-width: 600px) 600px, 1200px" width="600" height="400" alt="Interiores de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-interiores-1.webp" srcset="images/galeria-interiores-1-small.webp 600w, images/galeria-interiores-1.webp 1200w" sizes="(max-width: 600px) 600px, 1200px" alt="Interiores de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Interiores y Descanso <br><span class="text-sm font-normal opacity-80">(Habitaciones, sala y cocina)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -371,7 +368,7 @@
                     </div>
 
                     <div onclick="abrirGaleria('galeria_exteriores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-exteriores-1.webp" srcset="images/galeria-exteriores-1-small.webp 600w, images/galeria-exteriores-1.webp 1200w" sizes="(max-width: 600px) 600px, 1200px" width="600" height="400" alt="Piscina y exteriores de la casa" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-exteriores-1.webp" srcset="images/galeria-exteriores-1-small.webp 600w, images/galeria-exteriores-1.webp 1200w" sizes="(max-width: 600px) 600px, 1200px" alt="Piscina y exteriores de la casa" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Piscina y Naturaleza <br><span class="text-sm font-normal opacity-80">(Jardines y fachada)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -379,7 +376,7 @@
                     </div>
 
                     <div onclick="abrirGaleria('galeria_diversion')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-diversion-1.webp" srcset="images/galeria-diversion-1-small.webp 600w, images/galeria-diversion-1.webp 1200w" sizes="(max-width: 600px) 600px, 1200px" width="600" height="400" alt="Zona de diversión y parrilla" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-diversion-1.webp" srcset="images/galeria-diversion-1-small.webp 600w, images/galeria-diversion-1.webp 1200w" sizes="(max-width: 600px) 600px, 1200px" alt="Zona de diversión y parrilla" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Parrilla y Diversión <br><span class="text-sm font-normal opacity-80">(Juegos, hornos y eventos)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -399,10 +396,8 @@
                 
                 <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-100 h-[400px] mb-8 relative group cursor-pointer text-center">
                     <a href="https://maps.app.goo.gl/4AYHBnVbuZXCKaDM7?g_st=ac" target="_blank" aria-label="Ver ubicación en Google Maps" class="block w-full h-full">
-                        <!-- Ajuste de imagen responsiva -->
-                        <img src="images/fachada.webp" srcset="images/fachada-small.webp 600w, images/fachada.webp 1200w" sizes="(max-width: 600px) 600px, 1200px" width="800" height="400" alt="Fachada de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/fachada.webp" srcset="images/fachada-small.webp 600w, images/fachada.webp 1200w" sizes="(max-width: 600px) 600px, 1200px" alt="Fachada de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center transition-opacity duration-300">
-                            <!-- Ajuste contraste botón -->
                             <span class="bg-amber-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 shadow-lg hover:bg-amber-800 transition-colors">
                                 <i data-lucide="map-pin"></i> Ver en Google Maps
                             </span>
@@ -476,7 +471,6 @@
                 </div>
 
                 <div class="bg-[#2D1A11] p-8 md:p-10 rounded-3xl shadow-2xl relative border border-[#4E342E] flex flex-col justify-between mt-6 md:mt-0">
-                    <!-- Ajuste contraste badge -->
                     <span class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-700 text-white font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-md text-sm whitespace-nowrap">¡El más buscado!</span>
                     <div>
                         <h3 class="text-2xl font-bold text-white mt-2">Fin de Semana</h3>
@@ -490,7 +484,6 @@
                         </div>
                         <p class="text-stone-300 mt-6">Disfruta el fin de semana a tiempo completo con familiares o amigos.</p>
                     </div>
-                    <!-- Ajuste contraste botón principal 2 -->
                     <a href="https://wa.me/51959571464?text=Hola,%20quiero%20consultar%20disponibilidad%20para%20un%20fin%20de%20semana" 
                        target="_blank" 
                        class="animacion-latido block w-full text-center bg-amber-700 hover:bg-amber-800 text-white font-extrabold py-4 rounded-xl mt-8 shadow-[0_0_20px_rgba(217,119,6,0.4)] transition-colors">
@@ -502,7 +495,6 @@
     </main>
 
     <!-- FOOTER -->
-    <!-- Ajuste contraste general de texto -->
     <footer class="bg-[#1A0F0A] text-stone-300 py-12">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8">
@@ -552,7 +544,7 @@
             }, 2000);
         }
 
-        // Burbuja WhatsApp (Aparece a los 30 segundos)
+        // Burbuja WhatsApp
         setTimeout(() => {
             const tooltip = document.getElementById('tooltip-wsp');
             if(tooltip && !localStorage.getItem('wsp_tooltip_cerrado')) {
@@ -570,9 +562,7 @@
             }
         }
 
-        // =========================================================================
-        // PANEL DE CONTROL DE FOTOS (Configura aquí la cantidad exacta para evitar errores 404)
-        // =========================================================================
+        // PANEL DE CONTROL DE FOTOS
         const cantidadDeFotos = {
             carrusel_relax: 3,     
             carrusel_cocina: 3,
@@ -582,7 +572,6 @@
             galeria_diversion: 4
         };
 
-        // Generar rutas dinámicamente usando las cantidades declaradas arriba
         const configuracionFotos = {
             carrusel_relax: Array.from({length: cantidadDeFotos.carrusel_relax}, (_, i) => `images/zona-relax-${i+1}.webp`),
             carrusel_cocina: Array.from({length: cantidadDeFotos.carrusel_cocina}, (_, i) => `images/zona-cocina-${i+1}.webp`),
@@ -592,7 +581,7 @@
             galeria_diversion: Array.from({length: cantidadDeFotos.galeria_diversion}, (_, i) => `images/galeria-diversion-${i+1}.webp`)
         };
 
-        // --- INICIALIZAR Y GESTIONAR CARRUSELES ---
+        // INICIALIZAR Y GESTIONAR CARRUSELES
         function inicializarCarruseles() {
             const listadoZonas = ['carrusel_relax', 'carrusel_cocina', 'carrusel_diversion'];
             
@@ -602,22 +591,18 @@
                 if (!contenedor) return;
 
                 contenedor.innerHTML = ''; 
-                // Duplicar array para el bucle
                 const fotosSetFinal = [...configuracionFotos[zona], ...configuracionFotos[zona]];
                 
                 fotosSetFinal.forEach(ruta => {
                     const img = document.createElement('img');
                     img.src = ruta;
                     
-                    // Ajuste de imágenes responsivas para JS dinámico
                     const rutaSmall = ruta.replace('.webp', '-small.webp');
                     img.srcset = `${rutaSmall} 600w, ${ruta} 1200w`;
                     img.sizes = "(max-width: 600px) 600px, 1200px";
-                    img.width = 600;
-                    img.height = 400;
                     
                     img.alt = "Detalle de las instalaciones de la casa de campo";
-                    img.loading = "lazy"; // Mejora del puntaje LCP
+                    img.loading = "lazy";
                     img.className = 'freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full';
                     contenedor.appendChild(img);
                 });
@@ -634,7 +619,7 @@
         
         inicializarCarruseles();
 
-        // --- OBSERVADOR PARA EL AMAGUE ---
+        // OBSERVADOR PARA EL AMAGUE
         const observadorAmague = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -679,7 +664,7 @@
             carrusel.scrollBy({ left: cantidadMover * direccion, behavior: 'smooth' });
         }
 
-        // --- SISTEMA DE GALERÍA MODAL TÁCTIL ---
+        // SISTEMA DE GALERÍA MODAL TÁCTIL
         const modal = document.getElementById('modal-galeria');
         const imgModal = document.getElementById('foto-principal-modal');
         const contFoto = document.getElementById('contenedor-foto-principal');
