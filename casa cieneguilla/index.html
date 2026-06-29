@@ -11,47 +11,44 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Alquiler de Casa de Campo en Cieneguilla | Trato Directo</title>
     <meta name="description" content="Reserva tu casa de campo totalmente privada en Cieneguilla. Disfruta de 1,000m² exclusivos con piscina privada, parrilla y horno de barro. Trato directo sin comisiones.">
     <meta name="keywords" content="casa de campo, Cieneguilla, alquiler, piscina, parrilla, full day, fin de semana, pet friendly, Lima, trato directo">
     <meta name="robots" content="index, follow">
 
-    <!-- Precarga de LCP optimizada con fetchpriority="high" -->
+    <!-- Precarga de LCP optimizada -->
     <link rel="preload" as="image" href="images/foto-principal-movil.webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
     <meta property="og:title" content="Tu Escapada Perfecta en Cieneguilla | Alquiler Exclusivo">
     <meta property="og:image" content="https://casasdecampocieneguilla.com/images/vista-previa.webp">
     <link rel="icon" type="image/jpeg" href="images/vista-previa.webp">
 
-    <!-- Tailwind sin defer para estabilidad visual, Lucide con defer para ahorrar TBT -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Scripts con DEFER para máximo rendimiento en móviles -->
+    <script defer src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
 
     <style>
+        /* CSS Vital Integrado para prevenir distorsión durante la carga */
+        .portada-segura { position: relative; height: 85vh; display: flex; align-items: center; justify-content: center; background-color: #3E2723; overflow: hidden; }
+        .imagen-blindada { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+
         @keyframes latido { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
         .animacion-latido { animation: latido 1.8s ease-in-out infinite; }
-        
         @keyframes resplandor { 0%, 100% { box-shadow: 0 0 10px rgba(180,83,9,0.3); } 50% { box-shadow: 0 0 25px rgba(180,83,9,0.8); } }
         .animacion-resplandor { animation: resplandor 3s ease-in-out infinite; }
-        
         @keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .boton-flotante { animation: flotar 3s ease-in-out infinite; }
-        
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
         .scrollbar-visible::-webkit-scrollbar { height: 6px; }
         .scrollbar-visible::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
         .scrollbar-visible::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 10px; }
         .scrollbar-visible { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.4) rgba(255,255,255,0.1); }
-        
         @keyframes scroll-infinito { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 1.5rem)); } }
         .animacion-scroll { animation: scroll-infinito 25s linear infinite; }
         .contenedor-carrusel:hover .animacion-scroll { animation-play-state: paused; }
-        
         .freno-deslizamiento { scroll-snap-stop: always; }
-        
         @keyframes amagueSeda { 0% { transform: translateX(0); } 30% { transform: translateX(-60px); } 55% { transform: translateX(-60px); } 85% { transform: translateX(3px); } 100% { transform: translateX(0); } }
         .ejecutar-amague img { animation: amagueSeda 1.4s cubic-bezier(0.25, 1, 0.5, 1) both; }
     </style>
@@ -61,46 +58,37 @@
     <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-stone-900 text-white p-4 sm:p-5 z-[120] transform translate-y-full transition-transform duration-500 shadow-[0_-10px_20px_rgba(0,0,0,0.3)]">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="text-sm text-stone-300 text-center md:text-left">
-                <p><strong class="text-white">Aviso de Privacidad y Cookies:</strong> Utilizamos cookies propias y de terceros para personalizar el contenido, analizar nuestro tráfico y brindarte una mejor experiencia.</p>
+                <p><strong class="text-white">Aviso de Privacidad y Cookies:</strong> Utilizamos cookies propias y de terceros para personalizar el contenido.</p>
             </div>
             <div class="flex items-center gap-4 whitespace-nowrap">
-                <button onclick="gestionarCookies(false)" class="text-stone-400 hover:text-white text-sm font-medium transition-colors underline" aria-label="Rechazar cookies">Rechazar</button>
-                <button onclick="gestionarCookies(true)" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded-xl transition-colors shadow-lg" aria-label="Aceptar cookies">Aceptar cookies</button>
+                <button onclick="gestionarCookies(false)" class="text-stone-400 hover:text-white text-sm font-medium transition-colors underline">Rechazar</button>
+                <button onclick="gestionarCookies(true)" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded-xl transition-colors shadow-lg">Aceptar cookies</button>
             </div>
         </div>
     </div>
 
-    <div id="tooltip-wsp" class="fixed bottom-24 right-4 sm:right-6 bg-white text-stone-800 p-4 rounded-2xl shadow-2xl z-[100] transform scale-0 opacity-0 origin-bottom-right transition-all duration-500 max-w-[210px] sm:max-w-[240px] border border-stone-200 pointer-events-none">
-        <div class="relative">
-            <button onclick="cerrarTooltip()" aria-label="Cerrar mensaje emergente" class="absolute -top-2 -right-2 text-stone-500 hover:text-red-500"><i data-lucide="x" class="w-4 h-4"></i></button>
-            <p class="text-sm font-extrabold leading-tight text-stone-800">¿Tienes alguna duda antes de reservar?</p>
-            <p class="text-xs text-stone-600 mt-2 font-medium">Escríbeme por aquí y te daré un <span class="text-amber-700 font-bold">precio especial</span> 👇</p>
-            <div class="absolute -bottom-6 right-4 w-4 h-4 bg-white transform rotate-45 border-r border-b border-stone-200"></div>
-        </div>
-    </div>
-
-    <!-- Botón WSP con Accesibilidad Corregida (sr-only) -->
-    <a href="https://wa.me/51959571464?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20deseo%20m%C3%A1s%20informaci%C3%B3n" 
+    <!-- Botón WSP con accesibilidad corregida -->
+    <a href="https://wa.me/51959571464?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web" 
        target="_blank" 
        class="fixed bottom-6 right-4 sm:right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] boton-flotante hover:bg-green-500 transition-colors border-2 border-white flex items-center justify-center">
         <span class="sr-only">Contactar por WhatsApp</span>
         <svg class="w-9 h-9 fill-current" aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></svg>
     </a>
 
-    <header class="relative h-[85vh] flex items-center justify-center bg-[#3E2723] overflow-hidden">
-        <picture class="absolute inset-0 w-full h-full">
+    <!-- PORTADA BLINDADA CON CSS NATIVO -->
+    <header class="portada-segura">
+        <picture class="imagen-blindada">
             <source media="(max-width: 768px)" srcset="images/foto-principal-movil.webp">
-            <img src="images/foto-principal.webp" alt="Casa de Campo en Cieneguilla" width="1920" height="1080" fetchpriority="high" class="w-full h-full object-cover opacity-75">
+            <img src="images/foto-principal.webp" alt="Casa de Campo en Cieneguilla" width="1920" height="1080" fetchpriority="high" class="imagen-blindada">
         </picture>
         <div class="absolute inset-0 bg-black/40"></div>
 
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <span class="inline-block bg-amber-700 text-white text-sm uppercase tracking-widest font-black px-6 py-2.5 rounded-full animacion-resplandor border border-amber-600/50">Alquiler Exclusivo</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 tracking-tight drop-shadow-xl">Tu Escapada Perfecta en Cieneguilla</h1>
-            <p class="text-lg md:text-xl text-stone-100 mt-6 max-w-2xl mx-auto font-medium drop-shadow-md">Sin intermediarios ni comisiones ocultas. Vive una escapada de ensueño y disfruta de un espacio diseñado para tu total desconexión.</p>
-            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/51959571464?text=Hola,%20solicito%20informaci%C3%B3n%20y%20disponibilidad%20para%20la%20casa%20de%20campo" target="_blank" class="animacion-latido bg-amber-700 hover:bg-amber-800 text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(180,83,9,0.5)] transition-colors text-center flex items-center justify-center gap-3">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></svg>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" style="z-index: 10;">
+            <span class="inline-block bg-amber-700 text-white text-sm uppercase tracking-widest font-black px-6 py-2.5 rounded-full animacion-resplandor" style="background-color: #b45309; color: white; padding: 10px 24px; border-radius: 9999px; display: inline-block;">Alquiler Exclusivo</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 tracking-tight drop-shadow-xl" style="color: white; font-size: 2.5rem; font-weight: 800; margin-top: 1.5rem;">Tu Escapada Perfecta en Cieneguilla</h1>
+            <p class="text-lg md:text-xl text-stone-100 mt-6 max-w-2xl mx-auto font-medium drop-shadow-md" style="color: #f5f5f4; margin-top: 1.5rem; max-width: 42rem; margin-left: auto; margin-right: auto;">Sin intermediarios ni comisiones ocultas. Vive una escapada de ensueño y disfruta de un espacio diseñado para tu total desconexión.</p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center" style="margin-top: 2.5rem; display: flex; justify-content: center;">
+                <a href="https://wa.me/51959571464" target="_blank" class="animacion-latido bg-amber-700 hover:bg-amber-800 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-colors text-center" style="background-color: #b45309; color: white; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: bold; text-decoration: none;">
                     Reservar por WhatsApp
                 </a>
             </div>
@@ -135,15 +123,15 @@
                 <p class="text-lg text-stone-500 mt-4">Nuestras instalaciones están equipadas al detalle para que no te falte nada.</p>
             </div>
 
-            <!-- ZONA 1: RELAX (Con responsive activado) -->
+            <!-- Carruseles Simples para evitar errores de Javascript -->
             <div class="flex flex-col md:flex-row items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-relax"></div>
                     <div id="carrusel-relax" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        <img src="images/zona-relax-1-small.webp" srcset="images/zona-relax-1-small.webp 600w, images/zona-relax-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-relax-2-small.webp" srcset="images/zona-relax-2-small.webp 600w, images/zona-relax-2.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-relax-3-small.webp" srcset="images/zona-relax-3-small.webp 600w, images/zona-relax-3.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-relax-1-small.webp" srcset="images/zona-relax-1-small.webp 600w, images/zona-relax-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-2.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-3.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-relax', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-relax', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -160,15 +148,14 @@
                 </div>
             </div>
 
-            <!-- ZONA 2: COCINA (Con responsive activado) -->
             <div class="flex flex-col md:flex-row-reverse items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-cocina"></div>
                     <div id="carrusel-cocina" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        <img src="images/zona-cocina-1-small.webp" srcset="images/zona-cocina-1-small.webp 600w, images/zona-cocina-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-cocina-2-small.webp" srcset="images/zona-cocina-2-small.webp 600w, images/zona-cocina-2.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-cocina-3-small.webp" srcset="images/zona-cocina-3-small.webp 600w, images/zona-cocina-3.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-cocina-1-small.webp" srcset="images/zona-cocina-1-small.webp 600w, images/zona-cocina-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-2.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-3.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-cocina', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-cocina', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -185,17 +172,16 @@
                 </div>
             </div>
 
-            <!-- ZONA 3: DIVERSIÓN (Con responsive activado) -->
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-diversion"></div>
                     <div id="carrusel-diversion" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        <img src="images/zona-diversion-1-small.webp" srcset="images/zona-diversion-1-small.webp 600w, images/zona-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-diversion-2-small.webp" srcset="images/zona-diversion-2-small.webp 600w, images/zona-diversion-2.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-diversion-3-small.webp" srcset="images/zona-diversion-3-small.webp 600w, images/zona-diversion-3.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-diversion-4-small.webp" srcset="images/zona-diversion-4-small.webp 600w, images/zona-diversion-4.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-diversion-5-small.webp" srcset="images/zona-diversion-5-small.webp 600w, images/zona-diversion-5.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
-                        <img src="images/zona-diversion-1-small.webp" srcset="images/zona-diversion-1-small.webp 600w, images/zona-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-1.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-2.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-3.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-4.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-5.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-1.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-diversion', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-diversion', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -323,7 +309,7 @@
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div onclick="abrirGaleria('galeria_interiores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-interiores-1-small.webp" srcset="images/galeria-interiores-1-small.webp 600w, images/galeria-interiores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Interiores de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-interiores-1.webp" alt="Interiores de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Interiores y Descanso <br><span class="text-sm font-normal opacity-80">(Habitaciones, sala y cocina)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -331,7 +317,7 @@
                     </div>
 
                     <div onclick="abrirGaleria('galeria_exteriores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-exteriores-1-small.webp" srcset="images/galeria-exteriores-1-small.webp 600w, images/galeria-exteriores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Piscina y exteriores de la casa" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-exteriores-1.webp" alt="Piscina y exteriores de la casa" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Piscina y Naturaleza <br><span class="text-sm font-normal opacity-80">(Jardines y fachada)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -339,7 +325,7 @@
                     </div>
 
                     <div onclick="abrirGaleria('galeria_diversion')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-diversion-1-small.webp" srcset="images/galeria-diversion-1-small.webp 600w, images/galeria-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Zona de diversión y parrilla" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-diversion-1.webp" alt="Zona de diversión y parrilla" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Parrilla y Diversión <br><span class="text-sm font-normal opacity-80">(Juegos, hornos y eventos)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -359,7 +345,7 @@
                 
                 <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-100 h-[400px] mb-8 relative group cursor-pointer text-center">
                     <a href="https://maps.app.goo.gl/4AYHBnVbuZXCKaDM7?g_st=ac" target="_blank" aria-label="Ver ubicación en Google Maps" class="block w-full h-full">
-                        <img src="images/fachada-small.webp" srcset="images/fachada-small.webp 600w, images/fachada.webp 1200w" sizes="(max-width: 768px) 100vw, 100vw" width="800" height="400" alt="Fachada de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/fachada.webp" alt="Fachada de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center transition-opacity duration-300">
                             <span class="bg-amber-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 shadow-lg hover:bg-amber-800 transition-colors">
                                 <i data-lucide="map-pin"></i> Ver en Google Maps
@@ -370,7 +356,7 @@
             </div>
         </section>
 
-        <!-- MODAL (Ventana de galería REPARADA) -->
+        <!-- MODAL (Ventana de galería) -->
         <div id="modal-galeria" class="hidden fixed inset-0 z-[110] bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-sm">
             <button onclick="cerrarGaleria()" aria-label="Cerrar galería de fotos" class="absolute top-6 right-6 text-white hover:text-amber-500 transition-colors z-50"><i data-lucide="x-circle" class="w-12 h-12 drop-shadow-md"></i></button>
             <div class="absolute top-20 text-white/60 text-sm flex items-center gap-2 animate-pulse md:hidden font-medium"><i data-lucide="move-horizontal" class="w-5 h-5"></i> Desliza la foto</div>
@@ -544,10 +530,7 @@
             
             fotosActualesModal.forEach((ruta, index) => {
                 const img = document.createElement('img');
-                
-                // Las miniaturas siempre cargan su archivo original para evitar errores 404
                 img.src = ruta; 
-                
                 img.alt = "Vista en miniatura de la casa";
                 img.loading = "lazy";
                 img.className = 'w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-xl cursor-pointer border-4 transition-all shadow-md flex-shrink-0 snap-center ' + 
