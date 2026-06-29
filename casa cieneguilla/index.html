@@ -11,6 +11,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Alquiler de Casa de Campo en Cieneguilla | Trato Directo</title>
     <meta name="description" content="Reserva tu casa de campo totalmente privada en Cieneguilla. Disfruta de 1,000m² exclusivos con piscina privada, parrilla y horno de barro. Trato directo sin comisiones.">
     <meta name="keywords" content="casa de campo, Cieneguilla, alquiler, piscina, parrilla, full day, fin de semana, pet friendly, Lima, trato directo">
@@ -22,25 +23,37 @@
     <meta property="og:image" content="https://casasdecampocieneguilla.com/images/vista-previa.webp">
     <link rel="icon" type="image/jpeg" href="images/vista-previa.webp">
 
-    <script defer src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <!-- Tailwind y Iconos SIN defer para evitar que la página "explote" al cargar -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         @keyframes latido { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
         .animacion-latido { animation: latido 1.8s ease-in-out infinite; }
+        
         @keyframes resplandor { 0%, 100% { box-shadow: 0 0 10px rgba(180,83,9,0.3); } 50% { box-shadow: 0 0 25px rgba(180,83,9,0.8); } }
         .animacion-resplandor { animation: resplandor 3s ease-in-out infinite; }
+        
         @keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .boton-flotante { animation: flotar 3s ease-in-out infinite; }
+        
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
         .scrollbar-visible::-webkit-scrollbar { height: 6px; }
         .scrollbar-visible::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
         .scrollbar-visible::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 10px; }
         .scrollbar-visible { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.4) rgba(255,255,255,0.1); }
+        
+        /* Animación original del carrusel de reseñas */
+        @keyframes scroll-infinito { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 1.5rem)); } }
+        .animacion-scroll { animation: scroll-infinito 25s linear infinite; }
+        .contenedor-carrusel:hover .animacion-scroll { animation-play-state: paused; }
+        
         .freno-deslizamiento { scroll-snap-stop: always; }
+        
         @keyframes amagueSeda { 0% { transform: translateX(0); } 30% { transform: translateX(-60px); } 55% { transform: translateX(-60px); } 85% { transform: translateX(3px); } 100% { transform: translateX(0); } }
-        .ejecutar-amague > div, .ejecutar-amague > img { animation: amagueSeda 1.4s cubic-bezier(0.25, 1, 0.5, 1) both; }
+        .ejecutar-amague img { animation: amagueSeda 1.4s cubic-bezier(0.25, 1, 0.5, 1) both; }
     </style>
 </head>
 <body class="bg-[#FAFAF9] text-stone-800 antialiased font-sans relative">
@@ -48,7 +61,7 @@
     <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-stone-900 text-white p-4 sm:p-5 z-[120] transform translate-y-full transition-transform duration-500 shadow-[0_-10px_20px_rgba(0,0,0,0.3)]">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="text-sm text-stone-300 text-center md:text-left">
-                <p><strong class="text-white">Aviso de Privacidad y Cookies:</strong> Utilizamos cookies propias y de terceros para personalizar el contenido, analizar nuestro tráfico y brindarte una mejor experiencia, en cumplimiento con la <strong class="text-white">Ley N° 29733</strong>.</p>
+                <p><strong class="text-white">Aviso de Privacidad y Cookies:</strong> Utilizamos cookies propias y de terceros para personalizar el contenido, analizar nuestro tráfico y brindarte una mejor experiencia.</p>
             </div>
             <div class="flex items-center gap-4 whitespace-nowrap">
                 <button onclick="gestionarCookies(false)" class="text-stone-400 hover:text-white text-sm font-medium transition-colors underline" aria-label="Rechazar cookies">Rechazar</button>
@@ -68,7 +81,6 @@
 
     <a href="https://wa.me/51959571464?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20deseo%20m%C3%A1s%20informaci%C3%B3n" 
        target="_blank" 
-       aria-label="Contactar por WhatsApp"
        class="fixed bottom-6 right-4 sm:right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] boton-flotante hover:bg-green-500 transition-colors border-2 border-white flex items-center justify-center">
         <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></svg>
     </a>
@@ -121,7 +133,7 @@
                 <p class="text-lg text-stone-500 mt-4">Nuestras instalaciones están equipadas al detalle para que no te falte nada.</p>
             </div>
 
-            <!-- Carruseles Hardcodeados para evitar Salto de Diseño (CLS) -->
+            <!-- ZONA 1: RELAX -->
             <div class="flex flex-col md:flex-row items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-relax"></div>
@@ -129,6 +141,7 @@
                         <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                         <img src="images/zona-relax-2.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                         <img src="images/zona-relax-3.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-relax', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-relax', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -145,6 +158,7 @@
                 </div>
             </div>
 
+            <!-- ZONA 2: COCINA -->
             <div class="flex flex-col md:flex-row-reverse items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-cocina"></div>
@@ -152,6 +166,7 @@
                         <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                         <img src="images/zona-cocina-2.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                         <img src="images/zona-cocina-3.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-cocina', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-cocina', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -168,6 +183,7 @@
                 </div>
             </div>
 
+            <!-- ZONA 3: DIVERSIÓN -->
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-diversion"></div>
@@ -177,6 +193,7 @@
                         <img src="images/zona-diversion-3.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                         <img src="images/zona-diversion-4.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                         <img src="images/zona-diversion-5.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-1.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-diversion', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-diversion', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -194,8 +211,8 @@
             </div>
         </section>
 
-        <!-- TESTIMONIOS CONVERTIDOS A CARRUSEL DESLIZABLE -->
-        <section class="bg-[#F5F5F4] py-24 overflow-hidden border-t border-stone-200">
+        <!-- TESTIMONIOS: VUELVE LA ANIMACIÓN INFINITA ORIGINAL -->
+        <section class="bg-white py-24 overflow-hidden">
             <div class="max-w-6xl mx-auto px-4 text-center mb-12">
                 <div class="flex justify-center items-center gap-3 mb-4">
                     <i data-lucide="star" class="w-8 h-8 md:w-10 md:h-10 text-amber-500 fill-current mb-1"></i> 
@@ -203,16 +220,15 @@
                     <i data-lucide="star" class="w-8 h-8 md:w-10 md:h-10 text-amber-500 fill-current mb-1"></i>
                 </div>
                 <p class="text-xl text-stone-800 font-extrabold tracking-wide uppercase">Favorito entre huéspedes</p>
+                <p class="text-stone-500 mt-2">Mira lo que dicen de nosotros.</p>
             </div>
 
-            <div class="relative w-full max-w-6xl mx-auto px-4 group">
-                <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-stone-400 opacity-0 transition-opacity duration-300" id="hint-testimonios"></div>
-                
-                <div id="carrusel-testimonios" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-6 py-4 scroll-smooth w-full">
-                    
-                    <div class="bg-white p-8 rounded-3xl border border-stone-200 w-[85vw] sm:w-[350px] flex-shrink-0 shadow-md snap-center">
+            <div class="relative w-full overflow-hidden flex gap-6 contenedor-carrusel">
+                <!-- BLOQUE 1 -->
+                <div class="flex gap-6 animacion-scroll w-max shrink-0">
+                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">R</div>
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">R</div>
                             <div>
                                 <h3 class="font-bold text-stone-900">Roxana Anaí</h3>
                                 <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
@@ -220,10 +236,9 @@
                         </div>
                         <p class="text-stone-600 text-sm italic">"Un lugar muy bonito y acogedor, ideal para disfrutar en familia... Nos encantó todo, la música que se escucha en todos los ambientes. Fuimos 20 personas y estuvimos muy cómodos."</p>
                     </div>
-
-                    <div class="bg-white p-8 rounded-3xl border border-stone-200 w-[85vw] sm:w-[350px] flex-shrink-0 shadow-md snap-center">
+                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">V</div>
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">V</div>
                             <div>
                                 <h3 class="font-bold text-stone-900">Viviana Mariel</h3>
                                 <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
@@ -231,10 +246,9 @@
                         </div>
                         <p class="text-stone-600 text-sm italic">"Recomendable, han cuidado mucho la decoración con las plantas y eso le da un lindo paisaje interior. Tiene todo para pasar un agradable fin de semana."</p>
                     </div>
-
-                    <div class="bg-white p-8 rounded-3xl border border-stone-200 w-[85vw] sm:w-[350px] flex-shrink-0 shadow-md snap-center">
+                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">I</div>
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">I</div>
                             <div>
                                 <h3 class="font-bold text-stone-900">Ilva</h3>
                                 <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
@@ -242,10 +256,9 @@
                         </div>
                         <p class="text-stone-600 text-sm italic">"La casa estuvo impecable y acogedora, tenía todo no faltó nada, volveré a ir. Muy contenta con la visita, cuidan muy bien la casa."</p>
                     </div>
-
-                    <div class="bg-white p-8 rounded-3xl border border-stone-200 w-[85vw] sm:w-[350px] flex-shrink-0 shadow-md snap-center">
+                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">C</div>
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">C</div>
                             <div>
                                 <h3 class="font-bold text-stone-900">Christian</h3>
                                 <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
@@ -253,12 +266,55 @@
                         </div>
                         <p class="text-stone-600 text-sm italic">"Lugar con privacidad y gran ambiente de tranquilidad, altamente coincide con todo lo descrito. Un gusto alojarnos."</p>
                     </div>
+                </div>
 
+                <!-- BLOQUE 2 DUPLICADO PARA EFECTO INFINITO -->
+                <div class="flex gap-6 animacion-scroll w-max shrink-0">
+                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">R</div>
+                            <div>
+                                <h3 class="font-bold text-stone-900">Roxana Anaí</h3>
+                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-stone-600 text-sm italic">"Un lugar muy bonito y acogedor, ideal para disfrutar en familia... Nos encantó todo, la música que se escucha en todos los ambientes. Fuimos 20 personas y estuvimos muy cómodos."</p>
+                    </div>
+                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">V</div>
+                            <div>
+                                <h3 class="font-bold text-stone-900">Viviana Mariel</h3>
+                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-stone-600 text-sm italic">"Recomendable, han cuidado mucho la decoración con las plantas y eso le da un lindo paisaje interior. Tiene todo para pasar un agradable fin de semana."</p>
+                    </div>
+                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">I</div>
+                            <div>
+                                <h3 class="font-bold text-stone-900">Ilva</h3>
+                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-stone-600 text-sm italic">"La casa estuvo impecable y acogedora, tenía todo no faltó nada, volveré a ir. Muy contenta con la visita, cuidan muy bien la casa."</p>
+                    </div>
+                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">C</div>
+                            <div>
+                                <h3 class="font-bold text-stone-900">Christian</h3>
+                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-stone-600 text-sm italic">"Lugar con privacidad y gran ambiente de tranquilidad, altamente coincide con todo lo descrito. Un gusto alojarnos."</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- GALERÍA EXPANDIBLE -->
+        <!-- GALERÍA EXPANDIBLE CON ONCLICK REPARADO -->
         <section class="bg-[#EFEBE9] py-24 border-y border-stone-300">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center max-w-2xl mx-auto mb-16">
@@ -267,7 +323,7 @@
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div onclick="abrirGaleria('galeria_interiores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-interiores-1-small.webp" srcset="images/galeria-interiores-1-small.webp 600w, images/galeria-interiores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Interiores de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-interiores-1.webp" srcset="images/galeria-interiores-1-small.webp 600w, images/galeria-interiores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Interiores de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Interiores y Descanso <br><span class="text-sm font-normal opacity-80">(Habitaciones, sala y cocina)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -275,7 +331,7 @@
                     </div>
 
                     <div onclick="abrirGaleria('galeria_exteriores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-exteriores-1-small.webp" srcset="images/galeria-exteriores-1-small.webp 600w, images/galeria-exteriores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Piscina y exteriores de la casa" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-exteriores-1.webp" srcset="images/galeria-exteriores-1-small.webp 600w, images/galeria-exteriores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Piscina y exteriores de la casa" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Piscina y Naturaleza <br><span class="text-sm font-normal opacity-80">(Jardines y fachada)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -283,7 +339,7 @@
                     </div>
 
                     <div onclick="abrirGaleria('galeria_diversion')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <img src="images/galeria-diversion-1-small.webp" srcset="images/galeria-diversion-1-small.webp 600w, images/galeria-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Zona de diversión y parrilla" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="images/galeria-diversion-1.webp" srcset="images/galeria-diversion-1-small.webp 600w, images/galeria-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Zona de diversión y parrilla" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Parrilla y Diversión <br><span class="text-sm font-normal opacity-80">(Juegos, hornos y eventos)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -293,6 +349,7 @@
             </div>
         </section>
 
+        <!-- MAPA UBICACIÓN -->
         <section class="py-24 bg-white">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center mb-12">
@@ -302,7 +359,7 @@
                 
                 <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-100 h-[400px] mb-8 relative group cursor-pointer text-center">
                     <a href="https://maps.app.goo.gl/4AYHBnVbuZXCKaDM7?g_st=ac" target="_blank" aria-label="Ver ubicación en Google Maps" class="block w-full h-full">
-                        <img src="images/fachada-small.webp" srcset="images/fachada-small.webp 600w, images/fachada.webp 1200w" sizes="(max-width: 768px) 100vw, 100vw" width="800" height="400" alt="Fachada de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/fachada.webp" srcset="images/fachada-small.webp 600w, images/fachada.webp 1200w" sizes="(max-width: 768px) 100vw, 100vw" width="800" height="400" alt="Fachada de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center transition-opacity duration-300">
                             <span class="bg-amber-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 shadow-lg hover:bg-amber-800 transition-colors">
                                 <i data-lucide="map-pin"></i> Ver en Google Maps
@@ -313,7 +370,7 @@
             </div>
         </section>
 
-        <!-- MODAL -->
+        <!-- MODAL (Ventana de galería) -->
         <div id="modal-galeria" class="hidden fixed inset-0 z-[110] bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-sm">
             <button onclick="cerrarGaleria()" aria-label="Cerrar galería de fotos" class="absolute top-6 right-6 text-white hover:text-amber-500 transition-colors z-50"><i data-lucide="x-circle" class="w-12 h-12 drop-shadow-md"></i></button>
             <div class="absolute top-20 text-white/60 text-sm flex items-center gap-2 animate-pulse md:hidden font-medium"><i data-lucide="move-horizontal" class="w-5 h-5"></i> Desliza la foto</div>
@@ -383,7 +440,7 @@
         </div>
     </footer>
 
-    <!-- SCRIPT CORREGIDO (Salto de diseño y Miniaturas) -->
+    <!-- SCRIPT CORREGIDO (LIBRE, SEGURO Y GLOBAL) -->
     <script>
         lucide.createIcons();
 
@@ -417,17 +474,7 @@
             }
         }
 
-        const cantidadDeFotos = { carrusel_relax: 3, carrusel_cocina: 3, carrusel_diversion: 5, galeria_interiores: 7, galeria_exteriores: 7, galeria_diversion: 4 };
-
-        const configuracionFotos = {
-            carrusel_relax: Array.from({length: cantidadDeFotos.carrusel_relax}, (_, i) => `images/zona-relax-${i+1}.webp`),
-            carrusel_cocina: Array.from({length: cantidadDeFotos.carrusel_cocina}, (_, i) => `images/zona-cocina-${i+1}.webp`),
-            carrusel_diversion: Array.from({length: cantidadDeFotos.carrusel_diversion}, (_, i) => `images/zona-diversion-${i+1}.webp`),
-            galeria_interiores: Array.from({length: cantidadDeFotos.galeria_interiores}, (_, i) => `images/galeria-interiores-${i+1}.webp`),
-            galeria_exteriores: Array.from({length: cantidadDeFotos.galeria_exteriores}, (_, i) => `images/galeria-exteriores-${i+1}.webp`),
-            galeria_diversion: Array.from({length: cantidadDeFotos.galeria_diversion}, (_, i) => `images/galeria-diversion-${i+1}.webp`)
-        };
-
+        // OBSERVADOR PARA EL AMAGUE (CARRUSELES DE FOTOS)
         const observadorAmague = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -452,7 +499,7 @@
             });
         }, { threshold: 0.5 });
 
-        ['carrusel-relax', 'carrusel-cocina', 'carrusel-diversion', 'carrusel-testimonios'].forEach(id => {
+        ['carrusel-relax', 'carrusel-cocina', 'carrusel-diversion'].forEach(id => {
             const el = document.getElementById(id);
             if (el) observadorAmague.observe(el);
         });
@@ -464,6 +511,17 @@
             carrusel.style.scrollBehavior = 'smooth';
             carrusel.scrollBy({ left: cantidadMover * direccion, behavior: 'smooth' });
         }
+
+        // ==========================================
+        // GALERÍA MODAL TÁCTIL (CORREGIDA)
+        // ==========================================
+        const cantidadDeFotos = { galeria_interiores: 7, galeria_exteriores: 7, galeria_diversion: 4 };
+
+        const configuracionFotos = {
+            galeria_interiores: Array.from({length: cantidadDeFotos.galeria_interiores}, (_, i) => `images/galeria-interiores-${i+1}.webp`),
+            galeria_exteriores: Array.from({length: cantidadDeFotos.galeria_exteriores}, (_, i) => `images/galeria-exteriores-${i+1}.webp`),
+            galeria_diversion: Array.from({length: cantidadDeFotos.galeria_diversion}, (_, i) => `images/galeria-diversion-${i+1}.webp`)
+        };
 
         const modal = document.getElementById('modal-galeria');
         const imgModal = document.getElementById('foto-principal-modal');
@@ -489,7 +547,7 @@
             fotosActualesModal.forEach((ruta, index) => {
                 const img = document.createElement('img');
                 
-                // SOLUCIÓN MINIATURAS: Usar la ruta original, NO forzar -small.webp ya que no existen para la foto 2, 3, etc.
+                // SOLUCIÓN DEFINITIVA A MINIATURAS ROTAS: Usa la foto original
                 img.src = ruta; 
                 
                 img.alt = "Vista en miniatura de la casa";
