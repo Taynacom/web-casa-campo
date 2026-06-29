@@ -11,49 +11,48 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Alquiler de Casa de Campo en Cieneguilla | Trato Directo</title>
     <meta name="description" content="Reserva tu casa de campo totalmente privada en Cieneguilla. Disfruta de 1,000m² exclusivos con piscina privada, parrilla y horno de barro. Trato directo sin comisiones.">
     <meta name="keywords" content="casa de campo, Cieneguilla, alquiler, piscina, parrilla, full day, fin de semana, pet friendly, Lima, trato directo">
     <meta name="robots" content="index, follow">
 
+    <!-- Precarga de LCP optimizada -->
     <link rel="preload" as="image" href="images/foto-principal-movil.webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
     <meta property="og:title" content="Tu Escapada Perfecta en Cieneguilla | Alquiler Exclusivo">
     <meta property="og:image" content="https://casasdecampocieneguilla.com/images/vista-previa.webp">
     <link rel="icon" type="image/jpeg" href="images/vista-previa.webp">
 
-    <!-- Tailwind SIN defer para evitar el salto de diseño (CLS), Lucide CON defer -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/lucide@latest"></script>
-
     <style>
+        /* RESET NATIVO: Evita el Salto de Diseño (CLS) mientras carga Tailwind */
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        body { margin: 0; background-color: #FAFAF9; color: #292524; }
+        img { display: block; max-width: 100%; height: auto; }
+
         @keyframes latido { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
         .animacion-latido { animation: latido 1.8s ease-in-out infinite; }
-        
         @keyframes resplandor { 0%, 100% { box-shadow: 0 0 10px rgba(180,83,9,0.3); } 50% { box-shadow: 0 0 25px rgba(180,83,9,0.8); } }
         .animacion-resplandor { animation: resplandor 3s ease-in-out infinite; }
-        
         @keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .boton-flotante { animation: flotar 3s ease-in-out infinite; }
-        
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
         .scrollbar-visible::-webkit-scrollbar { height: 6px; }
         .scrollbar-visible::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
         .scrollbar-visible::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 10px; }
         .scrollbar-visible { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.4) rgba(255,255,255,0.1); }
-        
         @keyframes scroll-infinito { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 1.5rem)); } }
         .animacion-scroll { animation: scroll-infinito 25s linear infinite; }
         .contenedor-carrusel:hover .animacion-scroll { animation-play-state: paused; }
-        
         .freno-deslizamiento { scroll-snap-stop: always; }
-        
         @keyframes amagueSeda { 0% { transform: translateX(0); } 30% { transform: translateX(-60px); } 55% { transform: translateX(-60px); } 85% { transform: translateX(3px); } 100% { transform: translateX(0); } }
-        .ejecutar-amague picture { animation: amagueSeda 1.4s cubic-bezier(0.25, 1, 0.5, 1) both; }
+        .ejecutar-amague img { animation: amagueSeda 1.4s cubic-bezier(0.25, 1, 0.5, 1) both; }
     </style>
+
+    <!-- Tailwind CON defer para que la web cargue rápido en celulares -->
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-[#FAFAF9] text-stone-800 antialiased font-sans relative">
 
@@ -78,7 +77,6 @@
         </div>
     </div>
 
-    <!-- Accesibilidad Corregida: Texto para lectores de pantalla añadido -->
     <a href="https://wa.me/51959571464?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web" 
        target="_blank" 
        class="fixed bottom-6 right-4 sm:right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] boton-flotante hover:bg-green-500 transition-colors border-2 border-white flex items-center justify-center">
@@ -134,29 +132,14 @@
                 <p class="text-lg text-stone-500 mt-4">Nuestras instalaciones están equipadas al detalle para que no te falte nada.</p>
             </div>
 
-            <!-- Carruseles con bloqueo absoluto de imágenes para Móviles -->
             <div class="flex flex-col md:flex-row items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-relax"></div>
                     <div id="carrusel-relax" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-relax-1-small.webp">
-                            <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-relax-2-small.webp">
-                            <img src="images/zona-relax-2.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-relax-3-small.webp">
-                            <img src="images/zona-relax-3.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-relax-1-small.webp">
-                            <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-
+                        <img src="images/zona-relax-1-small.webp" srcset="images/zona-relax-1-small.webp 600w, images/zona-relax-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-2-small.webp" srcset="images/zona-relax-2-small.webp 600w, images/zona-relax-2.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-3-small.webp" srcset="images/zona-relax-3-small.webp 600w, images/zona-relax-3.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-1-small.webp" srcset="images/zona-relax-1-small.webp 600w, images/zona-relax-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-relax', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-relax', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -177,24 +160,10 @@
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-cocina"></div>
                     <div id="carrusel-cocina" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-cocina-1-small.webp">
-                            <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-cocina-2-small.webp">
-                            <img src="images/zona-cocina-2.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-cocina-3-small.webp">
-                            <img src="images/zona-cocina-3.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-cocina-1-small.webp">
-                            <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-
+                        <img src="images/zona-cocina-1-small.webp" srcset="images/zona-cocina-1-small.webp 600w, images/zona-cocina-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-2-small.webp" srcset="images/zona-cocina-2-small.webp 600w, images/zona-cocina-2.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-3-small.webp" srcset="images/zona-cocina-3-small.webp 600w, images/zona-cocina-3.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-1-small.webp" srcset="images/zona-cocina-1-small.webp 600w, images/zona-cocina-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-cocina', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-cocina', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -215,32 +184,12 @@
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-diversion"></div>
                     <div id="carrusel-diversion" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-1-small.webp">
-                            <img src="images/zona-diversion-1.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-2-small.webp">
-                            <img src="images/zona-diversion-2.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-3-small.webp">
-                            <img src="images/zona-diversion-3.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-4-small.webp">
-                            <img src="images/zona-diversion-4.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-5-small.webp">
-                            <img src="images/zona-diversion-5.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-1-small.webp">
-                            <img src="images/zona-diversion-1.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-
+                        <img src="images/zona-diversion-1-small.webp" srcset="images/zona-diversion-1-small.webp 600w, images/zona-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-2-small.webp" srcset="images/zona-diversion-2-small.webp 600w, images/zona-diversion-2.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-3-small.webp" srcset="images/zona-diversion-3-small.webp 600w, images/zona-diversion-3.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-4-small.webp" srcset="images/zona-diversion-4-small.webp 600w, images/zona-diversion-4.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-5-small.webp" srcset="images/zona-diversion-5-small.webp 600w, images/zona-diversion-5.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-1-small.webp" srcset="images/zona-diversion-1-small.webp 600w, images/zona-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
                     </div>
                     <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-diversion', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
                     <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-diversion', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
@@ -358,7 +307,6 @@
             </div>
         </section>
 
-        <!-- GALERÍA ESTÁTICA BLINDADA PARA MÓVILES -->
         <section class="bg-[#EFEBE9] py-24 border-y border-stone-300">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center max-w-2xl mx-auto mb-16">
@@ -367,10 +315,7 @@
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div onclick="abrirGaleria('galeria_interiores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <picture class="absolute inset-0 w-full h-full block">
-                            <source media="(max-width: 768px)" srcset="images/galeria-interiores-1-small.webp">
-                            <img src="images/galeria-interiores-1.webp" alt="Interiores de la casa de campo" loading="lazy" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </picture>
+                        <img src="images/galeria-interiores-1-small.webp" srcset="images/galeria-interiores-1-small.webp 600w, images/galeria-interiores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Interiores de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Interiores y Descanso <br><span class="text-sm font-normal opacity-80">(Habitaciones, sala y cocina)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -378,10 +323,7 @@
                     </div>
 
                     <div onclick="abrirGaleria('galeria_exteriores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <picture class="absolute inset-0 w-full h-full block">
-                            <source media="(max-width: 768px)" srcset="images/galeria-exteriores-1-small.webp">
-                            <img src="images/galeria-exteriores-1.webp" alt="Piscina y exteriores de la casa" loading="lazy" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </picture>
+                        <img src="images/galeria-exteriores-1-small.webp" srcset="images/galeria-exteriores-1-small.webp 600w, images/galeria-exteriores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Piscina y exteriores de la casa" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Piscina y Naturaleza <br><span class="text-sm font-normal opacity-80">(Jardines y fachada)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -389,10 +331,7 @@
                     </div>
 
                     <div onclick="abrirGaleria('galeria_diversion')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
-                        <picture class="absolute inset-0 w-full h-full block">
-                            <source media="(max-width: 768px)" srcset="images/galeria-diversion-1-small.webp">
-                            <img src="images/galeria-diversion-1.webp" alt="Zona de diversión y parrilla" loading="lazy" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </picture>
+                        <img src="images/galeria-diversion-1-small.webp" srcset="images/galeria-diversion-1-small.webp 600w, images/galeria-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Zona de diversión y parrilla" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Parrilla y Diversión <br><span class="text-sm font-normal opacity-80">(Juegos, hornos y eventos)</span></span>
                             <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
@@ -402,7 +341,6 @@
             </div>
         </section>
 
-        <!-- MAPA UBICACIÓN BLINDADO -->
         <section class="py-24 bg-white">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center mb-12">
@@ -412,10 +350,7 @@
                 
                 <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-100 h-[400px] mb-8 relative group cursor-pointer text-center">
                     <a href="https://maps.app.goo.gl/4AYHBnVbuZXCKaDM7?g_st=ac" target="_blank" aria-label="Ver ubicación en Google Maps" class="block w-full h-full">
-                        <picture class="block w-full h-full">
-                            <source media="(max-width: 768px)" srcset="images/fachada-small.webp">
-                            <img src="images/fachada.webp" alt="Fachada de la casa de campo" loading="lazy" width="800" height="400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </picture>
+                        <img src="images/fachada-small.webp" srcset="images/fachada-small.webp 600w, images/fachada.webp 1200w" sizes="(max-width: 768px) 100vw, 100vw" width="800" height="400" alt="Fachada de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-black/50 flex items-center justify-center transition-opacity duration-300">
                             <span class="bg-amber-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 shadow-lg hover:bg-amber-800 transition-colors">
                                 <i data-lucide="map-pin"></i> Ver en Google Maps
@@ -496,7 +431,6 @@
         </div>
     </footer>
 
-    <!-- Script Original Intacto -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             if (typeof lucide !== 'undefined') lucide.createIcons();
