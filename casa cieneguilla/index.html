@@ -11,57 +11,36 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO BÁSICO PARA GOOGLE -->
     <title>Alquiler de Casa de Campo en Cieneguilla | Trato Directo</title>
     <meta name="description" content="Reserva tu casa de campo totalmente privada en Cieneguilla. Disfruta de 1,000m² exclusivos con piscina privada, parrilla y horno de barro. Trato directo sin comisiones.">
     <meta name="keywords" content="casa de campo, Cieneguilla, alquiler, piscina, parrilla, full day, fin de semana, pet friendly, Lima, trato directo">
-    <meta name="author" content="Casas de Campo Cieneguilla">
     <meta name="robots" content="index, follow">
 
-    <!-- PRECARGA DE IMAGEN PRINCIPAL PARA MEJORAR LCP EN MÓVILES -->
     <link rel="preload" as="image" href="images/foto-principal-movil.webp" media="(max-width: 768px)">
 
-    <!-- VISTA PREVIA PARA WHATSAPP / FACEBOOK (OPEN GRAPH) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://casasdecampocieneguilla.com/">
     <meta property="og:title" content="Tu Escapada Perfecta en Cieneguilla | Alquiler Exclusivo">
-    <meta property="og:description" content="Sin intermediarios ni comisiones ocultas. Vive una escapada de ensueño y disfruta de un espacio diseñado para tu total desconexión.">
     <meta property="og:image" content="https://casasdecampocieneguilla.com/images/vista-previa.webp">
-
-    <!-- FAVICON -->
     <link rel="icon" type="image/jpeg" href="images/vista-previa.webp">
 
-    <!-- Tailwind y Iconos CON DEFER (Ahora seguros porque el JS inferior los espera) -->
     <script defer src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         @keyframes latido { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
         .animacion-latido { animation: latido 1.8s ease-in-out infinite; }
-
         @keyframes resplandor { 0%, 100% { box-shadow: 0 0 10px rgba(180,83,9,0.3); } 50% { box-shadow: 0 0 25px rgba(180,83,9,0.8); } }
         .animacion-resplandor { animation: resplandor 3s ease-in-out infinite; }
-
         @keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .boton-flotante { animation: flotar 3s ease-in-out infinite; }
-        
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
         .scrollbar-visible::-webkit-scrollbar { height: 6px; }
         .scrollbar-visible::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
         .scrollbar-visible::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 10px; }
         .scrollbar-visible { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.4) rgba(255,255,255,0.1); }
-
-        @keyframes scroll-infinito { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 1.5rem)); } }
-        .animacion-scroll { animation: scroll-infinito 25s linear infinite; }
-        .contenedor-carrusel:hover .animacion-scroll { animation-play-state: paused; }
-
         .freno-deslizamiento { scroll-snap-stop: always; }
-
         @keyframes amagueSeda { 0% { transform: translateX(0); } 30% { transform: translateX(-60px); } 55% { transform: translateX(-60px); } 85% { transform: translateX(3px); } 100% { transform: translateX(0); } }
-        .ejecutar-amague img { animation: amagueSeda 1.4s cubic-bezier(0.25, 1, 0.5, 1) both; }
+        .ejecutar-amague > div, .ejecutar-amague > img { animation: amagueSeda 1.4s cubic-bezier(0.25, 1, 0.5, 1) both; }
     </style>
 </head>
 <body class="bg-[#FAFAF9] text-stone-800 antialiased font-sans relative">
@@ -72,15 +51,15 @@
                 <p><strong class="text-white">Aviso de Privacidad y Cookies:</strong> Utilizamos cookies propias y de terceros para personalizar el contenido, analizar nuestro tráfico y brindarte una mejor experiencia, en cumplimiento con la <strong class="text-white">Ley N° 29733</strong>.</p>
             </div>
             <div class="flex items-center gap-4 whitespace-nowrap">
-                <button onclick="window.gestionarCookies(false)" class="text-stone-400 hover:text-white text-sm font-medium transition-colors underline" aria-label="Rechazar cookies">Rechazar</button>
-                <button onclick="window.gestionarCookies(true)" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded-xl transition-colors shadow-lg" aria-label="Aceptar cookies">Aceptar cookies</button>
+                <button onclick="gestionarCookies(false)" class="text-stone-400 hover:text-white text-sm font-medium transition-colors underline" aria-label="Rechazar cookies">Rechazar</button>
+                <button onclick="gestionarCookies(true)" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded-xl transition-colors shadow-lg" aria-label="Aceptar cookies">Aceptar cookies</button>
             </div>
         </div>
     </div>
 
     <div id="tooltip-wsp" class="fixed bottom-24 right-4 sm:right-6 bg-white text-stone-800 p-4 rounded-2xl shadow-2xl z-[100] transform scale-0 opacity-0 origin-bottom-right transition-all duration-500 max-w-[210px] sm:max-w-[240px] border border-stone-200 pointer-events-none">
         <div class="relative">
-            <button onclick="window.cerrarTooltip()" aria-label="Cerrar mensaje emergente" class="absolute -top-2 -right-2 text-stone-500 hover:text-red-500"><i data-lucide="x" class="w-4 h-4"></i></button>
+            <button onclick="cerrarTooltip()" aria-label="Cerrar mensaje emergente" class="absolute -top-2 -right-2 text-stone-500 hover:text-red-500"><i data-lucide="x" class="w-4 h-4"></i></button>
             <p class="text-sm font-extrabold leading-tight text-stone-800">¿Tienes alguna duda antes de reservar?</p>
             <p class="text-xs text-stone-600 mt-2 font-medium">Escríbeme por aquí y te daré un <span class="text-amber-700 font-bold">precio especial</span> 👇</p>
             <div class="absolute -bottom-6 right-4 w-4 h-4 bg-white transform rotate-45 border-r border-b border-stone-200"></div>
@@ -142,12 +121,17 @@
                 <p class="text-lg text-stone-500 mt-4">Nuestras instalaciones están equipadas al detalle para que no te falte nada.</p>
             </div>
 
+            <!-- Carruseles Hardcodeados para evitar Salto de Diseño (CLS) -->
             <div class="flex flex-col md:flex-row items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-relax"></div>
-                    <div id="carrusel-relax" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth"></div>
-                    <button aria-label="Anterior foto" onclick="window.moverCarrusel('carrusel-relax', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
-                    <button aria-label="Siguiente foto" onclick="window.moverCarrusel('carrusel-relax', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
+                    <div id="carrusel-relax" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
+                        <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-2.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-relax-3.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                    </div>
+                    <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-relax', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
+                    <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-relax', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
                 </div>
                 <div class="w-full md:w-1/2">
                     <h3 class="text-3xl font-bold text-stone-900 mb-4">Piscina, Naturaleza y Relax</h3>
@@ -164,9 +148,13 @@
             <div class="flex flex-col md:flex-row-reverse items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-cocina"></div>
-                    <div id="carrusel-cocina" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth"></div>
-                    <button aria-label="Anterior foto" onclick="window.moverCarrusel('carrusel-cocina', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
-                    <button aria-label="Siguiente foto" onclick="window.moverCarrusel('carrusel-cocina', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
+                    <div id="carrusel-cocina" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
+                        <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-2.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-cocina-3.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                    </div>
+                    <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-cocina', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
+                    <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-cocina', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
                 </div>
                 <div class="w-full md:w-1/2">
                     <h3 class="text-3xl font-bold text-stone-900 mb-4">Gastronomía a lo Grande</h3>
@@ -183,9 +171,15 @@
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-diversion"></div>
-                    <div id="carrusel-diversion" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth"></div>
-                    <button aria-label="Anterior foto" onclick="window.moverCarrusel('carrusel-diversion', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
-                    <button aria-label="Siguiente foto" onclick="window.moverCarrusel('carrusel-diversion', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
+                    <div id="carrusel-diversion" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
+                        <img src="images/zona-diversion-1.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-2.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-3.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-4.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                        <img src="images/zona-diversion-5.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full">
+                    </div>
+                    <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-diversion', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
+                    <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-diversion', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
                 </div>
                 <div class="w-full md:w-1/2">
                     <h3 class="text-3xl font-bold text-stone-900 mb-4">Entretenimiento y Confort Interior</h3>
@@ -200,7 +194,8 @@
             </div>
         </section>
 
-        <section class="bg-white py-24 overflow-hidden">
+        <!-- TESTIMONIOS CONVERTIDOS A CARRUSEL DESLIZABLE -->
+        <section class="bg-[#F5F5F4] py-24 overflow-hidden border-t border-stone-200">
             <div class="max-w-6xl mx-auto px-4 text-center mb-12">
                 <div class="flex justify-center items-center gap-3 mb-4">
                     <i data-lucide="star" class="w-8 h-8 md:w-10 md:h-10 text-amber-500 fill-current mb-1"></i> 
@@ -208,14 +203,16 @@
                     <i data-lucide="star" class="w-8 h-8 md:w-10 md:h-10 text-amber-500 fill-current mb-1"></i>
                 </div>
                 <p class="text-xl text-stone-800 font-extrabold tracking-wide uppercase">Favorito entre huéspedes</p>
-                <p class="text-stone-500 mt-2">Mira lo que dicen de nosotros.</p>
             </div>
 
-            <div class="relative w-full overflow-hidden flex gap-6 contenedor-carrusel">
-                <div class="flex gap-6 animacion-scroll w-max shrink-0">
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+            <div class="relative w-full max-w-6xl mx-auto px-4 group">
+                <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-stone-400 opacity-0 transition-opacity duration-300" id="hint-testimonios"></div>
+                
+                <div id="carrusel-testimonios" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-6 py-4 scroll-smooth w-full">
+                    
+                    <div class="bg-white p-8 rounded-3xl border border-stone-200 w-[85vw] sm:w-[350px] flex-shrink-0 shadow-md snap-center">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">R</div>
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">R</div>
                             <div>
                                 <h3 class="font-bold text-stone-900">Roxana Anaí</h3>
                                 <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
@@ -223,10 +220,10 @@
                         </div>
                         <p class="text-stone-600 text-sm italic">"Un lugar muy bonito y acogedor, ideal para disfrutar en familia... Nos encantó todo, la música que se escucha en todos los ambientes. Fuimos 20 personas y estuvimos muy cómodos."</p>
                     </div>
-                    <!-- Repeticiones de reseñas cortadas por brevedad visual, el CSS de animación las mueve -->
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+
+                    <div class="bg-white p-8 rounded-3xl border border-stone-200 w-[85vw] sm:w-[350px] flex-shrink-0 shadow-md snap-center">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">V</div>
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">V</div>
                             <div>
                                 <h3 class="font-bold text-stone-900">Viviana Mariel</h3>
                                 <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
@@ -234,10 +231,34 @@
                         </div>
                         <p class="text-stone-600 text-sm italic">"Recomendable, han cuidado mucho la decoración con las plantas y eso le da un lindo paisaje interior. Tiene todo para pasar un agradable fin de semana."</p>
                     </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-stone-200 w-[85vw] sm:w-[350px] flex-shrink-0 shadow-md snap-center">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">I</div>
+                            <div>
+                                <h3 class="font-bold text-stone-900">Ilva</h3>
+                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-stone-600 text-sm italic">"La casa estuvo impecable y acogedora, tenía todo no faltó nada, volveré a ir. Muy contenta con la visita, cuidan muy bien la casa."</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-stone-200 w-[85vw] sm:w-[350px] flex-shrink-0 shadow-md snap-center">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">C</div>
+                            <div>
+                                <h3 class="font-bold text-stone-900">Christian</h3>
+                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-stone-600 text-sm italic">"Lugar con privacidad y gran ambiente de tranquilidad, altamente coincide con todo lo descrito. Un gusto alojarnos."</p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- GALERÍA EXPANDIBLE -->
         <section class="bg-[#EFEBE9] py-24 border-y border-stone-300">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center max-w-2xl mx-auto mb-16">
@@ -245,7 +266,7 @@
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div onclick="window.abrirGaleria('galeria_interiores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
+                    <div onclick="abrirGaleria('galeria_interiores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
                         <img src="images/galeria-interiores-1-small.webp" srcset="images/galeria-interiores-1-small.webp 600w, images/galeria-interiores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Interiores de la casa de campo" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Interiores y Descanso <br><span class="text-sm font-normal opacity-80">(Habitaciones, sala y cocina)</span></span>
@@ -253,7 +274,7 @@
                         </div>
                     </div>
 
-                    <div onclick="window.abrirGaleria('galeria_exteriores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
+                    <div onclick="abrirGaleria('galeria_exteriores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
                         <img src="images/galeria-exteriores-1-small.webp" srcset="images/galeria-exteriores-1-small.webp 600w, images/galeria-exteriores-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Piscina y exteriores de la casa" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Piscina y Naturaleza <br><span class="text-sm font-normal opacity-80">(Jardines y fachada)</span></span>
@@ -261,7 +282,7 @@
                         </div>
                     </div>
 
-                    <div onclick="window.abrirGaleria('galeria_diversion')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
+                    <div onclick="abrirGaleria('galeria_diversion')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
                         <img src="images/galeria-diversion-1-small.webp" srcset="images/galeria-diversion-1-small.webp 600w, images/galeria-diversion-1.webp 1200w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Zona de diversión y parrilla" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                             <span class="text-white font-bold text-xl leading-tight">Parrilla y Diversión <br><span class="text-sm font-normal opacity-80">(Juegos, hornos y eventos)</span></span>
@@ -294,10 +315,10 @@
 
         <!-- MODAL -->
         <div id="modal-galeria" class="hidden fixed inset-0 z-[110] bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-sm">
-            <button onclick="window.cerrarGaleria()" aria-label="Cerrar galería de fotos" class="absolute top-6 right-6 text-white hover:text-amber-500 transition-colors z-50"><i data-lucide="x-circle" class="w-12 h-12 drop-shadow-md"></i></button>
+            <button onclick="cerrarGaleria()" aria-label="Cerrar galería de fotos" class="absolute top-6 right-6 text-white hover:text-amber-500 transition-colors z-50"><i data-lucide="x-circle" class="w-12 h-12 drop-shadow-md"></i></button>
             <div class="absolute top-20 text-white/60 text-sm flex items-center gap-2 animate-pulse md:hidden font-medium"><i data-lucide="move-horizontal" class="w-5 h-5"></i> Desliza la foto</div>
-            <button onclick="window.cambiarFotoModal(-1)" aria-label="Ver foto anterior" class="hidden md:block absolute left-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-50"><i data-lucide="chevron-left" class="w-16 h-16 drop-shadow-lg"></i></button>
-            <button onclick="window.cambiarFotoModal(1)" aria-label="Ver siguiente foto" class="hidden md:block absolute right-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-50"><i data-lucide="chevron-right" class="w-16 h-16 drop-shadow-lg"></i></button>
+            <button onclick="cambiarFotoModal(-1)" aria-label="Ver foto anterior" class="hidden md:block absolute left-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-50"><i data-lucide="chevron-left" class="w-16 h-16 drop-shadow-lg"></i></button>
+            <button onclick="cambiarFotoModal(1)" aria-label="Ver siguiente foto" class="hidden md:block absolute right-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-50"><i data-lucide="chevron-right" class="w-16 h-16 drop-shadow-lg"></i></button>
             <div class="w-full max-w-5xl h-[50vh] sm:h-[65vh] flex items-center justify-center mb-4 mt-12 sm:mt-0 overflow-hidden relative" id="contenedor-foto-principal">
                 <img id="foto-principal-modal" src="" alt="Vista ampliada de la casa" class="max-h-full max-w-full object-contain rounded-lg shadow-2xl transition-all duration-300">
             </div>
@@ -362,17 +383,11 @@
         </div>
     </footer>
 
-    <!-- SCRIPT BLINDADO CONTRA CHOQUES -->
+    <!-- SCRIPT CORREGIDO (Salto de diseño y Miniaturas) -->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Inicializar iconos de manera segura
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        } else {
-            setTimeout(() => { if(typeof lucide !== 'undefined') lucide.createIcons(); }, 300);
-        }
+        lucide.createIcons();
 
-        window.gestionarCookies = function(aceptadas) {
+        function gestionarCookies(aceptadas) {
             localStorage.setItem('cookies_aceptadas', aceptadas ? 'true' : 'false');
             const banner = document.getElementById('cookie-banner');
             if (banner) banner.classList.add('translate-y-full');
@@ -393,7 +408,7 @@
             }
         }, 30000); 
 
-        window.cerrarTooltip = function() {
+        function cerrarTooltip() {
             const tooltip = document.getElementById('tooltip-wsp');
             if(tooltip) {
                 tooltip.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto');
@@ -413,40 +428,6 @@
             galeria_diversion: Array.from({length: cantidadDeFotos.galeria_diversion}, (_, i) => `images/galeria-diversion-${i+1}.webp`)
         };
 
-        function inicializarCarruseles() {
-            const listadoZonas = ['carrusel_relax', 'carrusel_cocina', 'carrusel_diversion'];
-            listadoZonas.forEach(zona => {
-                const idDiv = zona.replace('_', '-');
-                const contenedor = document.getElementById(idDiv);
-                if (!contenedor) return;
-                contenedor.innerHTML = ''; 
-                const fotosSetFinal = [...configuracionFotos[zona], ...configuracionFotos[zona]];
-                
-                fotosSetFinal.forEach(ruta => {
-                    const img = document.createElement('img');
-                    const rutaSmall = ruta.replace('.webp', '-small.webp');
-                    img.src = rutaSmall; // Fuerza a cargar la versión liviana por defecto
-                    img.srcset = `${rutaSmall} 600w, ${ruta} 1200w`;
-                    img.sizes = "(max-width: 768px) 100vw, 50vw"; // Mejora el cálculo del celular
-                    img.width = 600;
-                    img.height = 400;
-                    img.alt = "Detalle de las instalaciones";
-                    img.loading = "lazy";
-                    img.className = 'freno-deslizamiento w-full flex-shrink-0 snap-center object-cover h-full';
-                    contenedor.appendChild(img);
-                });
-
-                contenedor.addEventListener('scroll', () => {
-                    const mitadWidth = contenedor.scrollWidth / 2;
-                    if (contenedor.scrollLeft >= mitadWidth - 1) {
-                        contenedor.style.scrollBehavior = 'auto'; 
-                        contenedor.scrollLeft -= mitadWidth;
-                    }
-                }, { passive: true });
-            });
-        }
-        inicializarCarruseles();
-
         const observadorAmague = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -459,7 +440,7 @@
                                 const cartelito = document.getElementById('hint-' + carrusel.id.split('-')[1]);
                                 if (cartelito) {
                                     cartelito.innerHTML = '<i data-lucide="hand" class="w-6 h-6 animate-pulse"></i> Desliza';
-                                    if(typeof lucide !== 'undefined') lucide.createIcons();
+                                    lucide.createIcons();
                                     cartelito.classList.replace('opacity-0', 'opacity-100');
                                     setTimeout(() => cartelito.classList.replace('opacity-100', 'opacity-0'), 2000);
                                 }
@@ -471,12 +452,12 @@
             });
         }, { threshold: 0.5 });
 
-        ['carrusel-relax', 'carrusel-cocina', 'carrusel-diversion'].forEach(id => {
+        ['carrusel-relax', 'carrusel-cocina', 'carrusel-diversion', 'carrusel-testimonios'].forEach(id => {
             const el = document.getElementById(id);
             if (el) observadorAmague.observe(el);
         });
 
-        window.moverCarrusel = function(id, direccion) {
+        function moverCarrusel(id, direccion) {
             const carrusel = document.getElementById(id);
             if(!carrusel) return;
             const cantidadMover = carrusel.clientWidth;
@@ -496,19 +477,21 @@
         contFoto.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
         contFoto.addEventListener('touchend', e => {
             touchEndX = e.changedTouches[0].screenX;
-            if (touchStartX - touchEndX > 40) window.cambiarFotoModal(1);
-            if (touchEndX - touchStartX > 40) window.cambiarFotoModal(-1);
+            if (touchStartX - touchEndX > 40) cambiarFotoModal(1);
+            if (touchEndX - touchStartX > 40) cambiarFotoModal(-1);
         }, {passive: true});
 
-        window.abrirGaleria = function(categoria) {
+        function abrirGaleria(categoria) {
             contenedorMiniaturas.innerHTML = '';
             fotosActualesModal = configuracionFotos[categoria];
             indiceActualModal = 0;
             
             fotosActualesModal.forEach((ruta, index) => {
                 const img = document.createElement('img');
-                const rutaSmall = ruta.replace('.webp', '-small.webp');
-                img.src = rutaSmall;
+                
+                // SOLUCIÓN MINIATURAS: Usar la ruta original, NO forzar -small.webp ya que no existen para la foto 2, 3, etc.
+                img.src = ruta; 
+                
                 img.alt = "Vista en miniatura de la casa";
                 img.loading = "lazy";
                 img.className = 'w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-xl cursor-pointer border-4 transition-all shadow-md flex-shrink-0 snap-center ' + 
@@ -524,7 +507,7 @@
             modal.classList.remove('hidden');
         }
 
-        window.cambiarFotoModal = function(direccion) {
+        function cambiarFotoModal(direccion) {
             indiceActualModal += direccion;
             if (indiceActualModal >= fotosActualesModal.length) indiceActualModal = 0;
             if (indiceActualModal < 0) indiceActualModal = fotosActualesModal.length - 1;
@@ -550,10 +533,9 @@
             }
         }
 
-        window.cerrarGaleria = function() {
+        function cerrarGaleria() {
             modal.classList.add('hidden');
         }
-    });
     </script>
 </body>
 </html>
