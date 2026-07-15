@@ -3,6 +3,25 @@
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18281856788"></script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2252553952165363');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2252553952165363&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -65,7 +84,6 @@
 
     <div id="tooltip-wsp" class="fixed bottom-24 right-4 sm:right-6 bg-white text-stone-800 p-4 rounded-2xl shadow-2xl z-[100] transform scale-0 opacity-0 origin-bottom-right transition-all duration-500 max-w-[210px] sm:max-w-[240px] border border-stone-200 pointer-events-none">
         <div class="relative">
-            <!-- Botón de cerrar corregido con aria-label -->
             <button onclick="cerrarTooltip()" aria-label="Cerrar mensaje emergente" class="absolute -top-2 -right-2 text-stone-500 hover:text-red-500"><i data-lucide="x" class="w-4 h-4"></i></button>
             <p class="text-sm font-extrabold leading-tight text-stone-800">¿Tienes alguna duda antes de reservar?</p>
             <p class="text-xs text-stone-600 mt-2 font-medium">Escríbeme por aquí y te daré un <span class="text-amber-700 font-bold">precio especial</span> 👇</p>
@@ -77,6 +95,7 @@
     <a href="https://wa.me/51959571464?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web" 
        target="_blank" 
        aria-label="Contactar por WhatsApp"
+       onclick="fbq('track', 'Lead');"
        class="fixed bottom-6 right-4 sm:right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] boton-flotante hover:bg-green-500 transition-colors border-2 border-white flex items-center justify-center">
         <svg class="w-9 h-9 fill-current" aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></svg>
     </a>
@@ -93,7 +112,7 @@
             <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 tracking-tight drop-shadow-xl">Tu Escapada Perfecta en Cieneguilla</h1>
             <p class="text-lg md:text-xl text-stone-100 mt-6 max-w-2xl mx-auto font-medium drop-shadow-md">Sin intermediarios ni comisiones ocultas. Vive una escapada de ensueño y disfruta de un espacio diseñado para tu total desconexión.</p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/51959571464?text=Hola,%20solicito%20informaci%C3%B3n" target="_blank" class="animacion-latido bg-amber-700 hover:bg-amber-800 text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(180,83,9,0.5)] transition-colors text-center flex items-center justify-center gap-3">
+                <a href="https://wa.me/51959571464?text=Hola,%20solicito%20informaci%C3%B3n" target="_blank" onclick="fbq('track', 'Lead');" class="animacion-latido bg-amber-700 hover:bg-amber-800 text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(180,83,9,0.5)] transition-colors text-center flex items-center justify-center gap-3">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></svg>
                     Reservar por WhatsApp
                 </a>
@@ -129,7 +148,6 @@
                 <p class="text-lg text-stone-500 mt-4">Nuestras instalaciones están equipadas al detalle para que no te falte nada.</p>
             </div>
 
-            <!-- Carruseles protegidos con -small -->
             <div class="flex flex-col md:flex-row items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
                     <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-relax"></div>
@@ -260,7 +278,6 @@
                     <p class="text-lg text-stone-600 mt-4">Sube el volumen y da un paseo virtual por nuestras instalaciones. La tranquilidad te espera.</p>
                 </div>
                 
-                <!-- Contenedor del video con Lazy Loading y Aspect Ratio 16:9 -->
                 <div class="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-200">
                     <iframe 
                         loading="lazy"
@@ -469,7 +486,7 @@
                         <div class="mt-8"><span class="block text-stone-600 text-sm font-bold uppercase tracking-wider mb-1">Desde</span><div class="flex flex-col sm:flex-row items-start sm:items-baseline sm:gap-2"><span class="text-6xl font-black text-stone-900 leading-none">S/ 700</span><span class="text-stone-500 font-medium text-lg sm:text-base mt-2 sm:mt-0">/ día</span></div></div>
                         <p class="text-stone-600 mt-6">Ideal para un escape total a mitad de semana con total privacidad y relax.</p>
                     </div>
-                    <a href="https://wa.me/51959571464?text=Hola,%20me%20interesa%20reservar%20d%C3%ADas%20particulares" target="_blank" class="animacion-latido block w-full text-center bg-stone-800 hover:bg-stone-900 text-white font-bold py-4 rounded-xl mt-8 transition-colors shadow-lg">Consultar Fechas</a>
+                    <a href="https://wa.me/51959571464?text=Hola,%20me%20interesa%20reservar%20d%C3%ADas%20particulares" target="_blank" onclick="fbq('track', 'Lead');" class="animacion-latido block w-full text-center bg-stone-800 hover:bg-stone-900 text-white font-bold py-4 rounded-xl mt-8 transition-colors shadow-lg">Consultar Fechas</a>
                 </div>
 
                 <div class="bg-[#2D1A11] p-8 md:p-10 rounded-3xl shadow-2xl relative border border-[#4E342E] flex flex-col justify-between mt-6 md:mt-0">
@@ -480,7 +497,7 @@
                         <div class="mt-8"><span class="block text-stone-400 text-sm font-bold uppercase tracking-wider mb-1">Desde</span><div class="flex flex-col sm:flex-row items-start sm:items-baseline sm:gap-2"><span class="text-6xl font-black text-white leading-none">S/ 1400</span><span class="text-stone-300 font-medium text-lg sm:text-base mt-2 sm:mt-0">/ paquete total</span></div></div>
                         <p class="text-stone-300 mt-6">Disfruta el fin de semana a tiempo completo con familiares o amigos.</p>
                     </div>
-                    <a href="https://wa.me/51959571464?text=Hola,%20quiero%20consultar%20disponibilidad%20para%20un%20fin%20de%20semana" target="_blank" class="animacion-latido block w-full text-center bg-amber-700 hover:bg-amber-800 text-white font-extrabold py-4 rounded-xl mt-8 shadow-[0_0_20px_rgba(217,119,6,0.4)] transition-colors">Reservar Fin de Semana</a>
+                    <a href="https://wa.me/51959571464?text=Hola,%20quiero%20consultar%20disponibilidad%20para%20un%20fin%20de%20semana" target="_blank" onclick="fbq('track', 'Lead');" class="animacion-latido block w-full text-center bg-amber-700 hover:bg-amber-800 text-white font-extrabold py-4 rounded-xl mt-8 shadow-[0_0_20px_rgba(217,119,6,0.4)] transition-colors">Reservar Fin de Semana</a>
                 </div>
             </div>
         </section>
@@ -490,7 +507,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8">
                 <div class="text-center md:text-left">
-                    <p class="text-white font-bold text-xl tracking-wide">Casas de Campo Cieneguilla</p>
+                    <p class="text-white font-bold text-xl tracking-wide">Casa de campo en Cieneguilla</p>
                     <p class="text-sm mt-2">El portal definitivo para tus días de descanso.</p>
                 </div>
                 <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm">
@@ -500,7 +517,7 @@
             </div>
             <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-stone-400 gap-4 text-center md:text-left">
                 <div class="flex flex-col gap-2">
-                    <p>© 2026 Casas de Campo Cieneguilla. Todos los derechos reservados.</p>
+                    <p>© 2026 Casa de campo en Cieneguilla. Todos los derechos reservados.</p>
                     <p class="font-bold text-stone-400">RUC: 10420042821</p>
                 </div>
                 <div class="flex flex-wrap justify-center gap-4 mt-4 md:mt-0">
