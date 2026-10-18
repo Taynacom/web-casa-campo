@@ -1,97 +1,267 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-PE" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro de Reclamaciones | Casas de Campo Cieneguilla</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Libro de Reclamaciones | Casa de Campo en Cieneguilla</title>
+    <meta name="description" content="Libro de Reclamaciones virtual de Casa de Campo en Cieneguilla. Registra tu reclamo o queja conforme al Código de Protección y Defensa del Consumidor.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.casasdecampocieneguilla.com/reclamaciones">
+    <link rel="icon" type="image/webp" href="images/vista-previa.webp">
+    <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body class="bg-[#FAFAF9] text-stone-800 antialiased font-sans flex flex-col min-h-screen">
+<!-- sprite-iconos -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+<symbol id="images" viewBox="0 0 24 24"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18"/><circle cx="12" cy="8" r="2"/><rect width="16" height="16" x="6" y="2" rx="2"/></symbol>
+<symbol id="map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+<symbol id="phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="book-open" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+<symbol id="arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+<symbol id="send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+<symbol id="chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="move-horizontal" viewBox="0 0 24 24"><path d="m18 8 4 4-4 4"/><path d="M2 12h20"/><path d="m6 8-4 4 4 4"/></symbol>
+<symbol id="hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></symbol>
+<symbol id="printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
+<symbol id="play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="wsp" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></symbol>
+</svg>
+<!-- /sprite-iconos -->
 
     <header class="bg-[#3E2723] py-12 px-4 text-center shadow-md border-b-8 border-amber-600">
         <div class="flex justify-center mb-4">
-            <i data-lucide="book-open" class="w-12 h-12 text-amber-500"></i>
+            <svg class="ic w-12 h-12 text-amber-500" viewBox="0 0 24 24" aria-hidden="true"><use href="#book-open"/></svg>
         </div>
         <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">Libro de Reclamaciones</h1>
         <p class="text-stone-300 mt-4 max-w-2xl mx-auto">Conforme a lo establecido en el Código de Protección y Defensa del Consumidor.</p>
     </header>
 
     <main class="flex-grow max-w-3xl mx-auto px-4 py-16 w-full">
-        <a href="index.html" class="inline-flex items-center gap-2 text-amber-700 font-bold hover:underline mb-8">
-            <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al inicio
+        <a href="index.html" class="no-imprimir inline-flex items-center gap-2 text-amber-800 font-bold hover:underline mb-8">
+            <svg class="ic w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#arrow-left"/></svg> Volver al inicio
         </a>
 
         <div class="bg-white p-8 rounded-3xl shadow-lg border border-stone-200">
             <div class="border-b border-stone-200 pb-6 mb-6">
-                <h2 class="text-xl font-black text-stone-900 uppercase">Datos del Proveedor</h2>
-                <p class="text-stone-600 mt-2"><strong>Razón Social / Proveedor:</strong> Judith Karent Penadillo Tello</p>
+                <h2 class="text-xl font-black text-stone-900 uppercase">Datos del proveedor</h2>
+                <p class="text-stone-600 mt-2"><strong>Razón social / proveedor:</strong> Judith Karent Penadillo Tello</p>
                 <p class="text-stone-600"><strong>RUC:</strong> 10420042821</p>
                 <p class="text-stone-600"><strong>Dirección:</strong> Sector Pampas Tinajas Sub SN C.C. Collanac, Cieneguilla.</p>
             </div>
 
-            <form action="casajardinencantado@gmail.com" method="POST" enctype="text/plain" class="space-y-6">
-                <!-- IDENTIFICACIÓN -->
-                <div>
-                    <h3 class="font-bold text-amber-800 bg-amber-50 px-4 py-2 rounded-lg mb-4">1. Identificación del Consumidor Reclamante</h3>
+            <!-- Los reclamos llegan por correo a CORREO (ver script al final). Envío con FormSubmit: no requiere clave. -->
+            <form id="form-reclamo" class="space-y-6" autocomplete="on">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="Nuevo reclamo/queja - Libro de Reclamaciones">
+                <input type="hidden" name="Codigo" id="campo-codigo" value="">
+                <input type="hidden" name="Fecha de registro" id="campo-fecha" value="">
+                <!-- Campo trampa contra robots: debe quedar vacío -->
+                <input type="checkbox" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <!-- 1. IDENTIFICACIÓN -->
+                <fieldset>
+                    <legend class="font-bold text-amber-900 bg-amber-50 px-4 py-2 rounded-lg mb-4 w-full">1. Identificación del consumidor reclamante</legend>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-bold text-stone-700 mb-1">Nombres y Apellidos *</label>
-                            <input type="text" name="Nombre" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                        <div class="md:col-span-2">
+                            <label for="f-nombre" class="block text-sm font-bold text-stone-700 mb-1">Nombres y apellidos *</label>
+                            <input id="f-nombre" type="text" name="name" required autocomplete="name" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-stone-700 mb-1">DNI / CE *</label>
-                            <input type="text" name="Documento" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label for="f-tipodoc" class="block text-sm font-bold text-stone-700 mb-1">Tipo de documento *</label>
+                            <select id="f-tipodoc" name="Tipo de documento" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                                <option value="DNI">DNI</option>
+                                <option value="CE">Carné de extranjería</option>
+                                <option value="Pasaporte">Pasaporte</option>
+                                <option value="RUC">RUC</option>
+                            </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-stone-700 mb-1">Celular *</label>
-                            <input type="tel" name="Celular" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label for="f-doc" class="block text-sm font-bold text-stone-700 mb-1">N° de documento *</label>
+                            <input id="f-doc" type="text" name="Numero de documento" required inputmode="numeric" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="f-domicilio" class="block text-sm font-bold text-stone-700 mb-1">Domicilio *</label>
+                            <input id="f-domicilio" type="text" name="Domicilio" required autocomplete="street-address" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-stone-700 mb-1">Correo Electrónico *</label>
-                            <input type="email" name="Email" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <label for="f-celular" class="block text-sm font-bold text-stone-700 mb-1">Celular *</label>
+                            <input id="f-celular" type="tel" name="Celular" required autocomplete="tel" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                        </div>
+                        <div>
+                            <label for="f-email" class="block text-sm font-bold text-stone-700 mb-1">Correo electrónico *</label>
+                            <input id="f-email" type="email" name="email" required autocomplete="email" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
                         </div>
                     </div>
-                </div>
+                </fieldset>
 
-                <!-- DETALLE -->
-                <div>
-                    <h3 class="font-bold text-amber-800 bg-amber-50 px-4 py-2 rounded-lg mb-4">2. Detalle de la Reclamación</h3>
+                <!-- 2. SERVICIO CONTRATADO -->
+                <fieldset>
+                    <legend class="font-bold text-amber-900 bg-amber-50 px-4 py-2 rounded-lg mb-4 w-full">2. Identificación del servicio contratado</legend>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="f-servicio" class="block text-sm font-bold text-stone-700 mb-1">Servicio *</label>
+                            <select id="f-servicio" name="Servicio contratado" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                                <option value="Alquiler de casa de campo - Full Day">Alquiler de casa de campo - Full Day</option>
+                                <option value="Alquiler de casa de campo - Fin de semana">Alquiler de casa de campo - Fin de semana</option>
+                                <option value="Otro servicio">Otro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="f-fecha-servicio" class="block text-sm font-bold text-stone-700 mb-1">Fecha del servicio o de la reserva *</label>
+                            <input id="f-fecha-servicio" type="date" name="Fecha del servicio" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                        </div>
+                        <div>
+                            <label for="f-monto" class="block text-sm font-bold text-stone-700 mb-1">Monto reclamado (S/) <span class="font-normal text-stone-500">(opcional)</span></label>
+                            <input id="f-monto" type="number" name="Monto reclamado" min="0" step="0.01" inputmode="decimal" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- 3. DETALLE -->
+                <fieldset>
+                    <legend class="font-bold text-amber-900 bg-amber-50 px-4 py-2 rounded-lg mb-4 w-full">3. Detalle de la reclamación</legend>
                     <div class="space-y-4">
                         <div>
-                            <label class="block text-sm font-bold text-stone-700 mb-2">Tipo *</label>
-                            <div class="flex gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="Tipo" value="Reclamo" required class="accent-amber-600"> Reclamo (Disconformidad con el servicio)</label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="Tipo" value="Queja" required class="accent-amber-600"> Queja (Malestar respecto a la atención)</label>
+                            <span class="block text-sm font-bold text-stone-700 mb-2">Tipo *</span>
+                            <div class="flex flex-col sm:flex-row gap-3 sm:gap-6">
+                                <label class="flex items-start gap-2 cursor-pointer"><input type="radio" name="Tipo" value="Reclamo" required class="accent-amber-600 mt-1"> <span>Reclamo <span class="text-stone-500">(disconformidad con el servicio)</span></span></label>
+                                <label class="flex items-start gap-2 cursor-pointer"><input type="radio" name="Tipo" value="Queja" required class="accent-amber-600 mt-1"> <span>Queja <span class="text-stone-500">(malestar respecto a la atención)</span></span></label>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-stone-700 mb-1">Detalle del suceso *</label>
-                            <textarea name="Detalle" rows="4" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none resize-none" placeholder="Describe claramente lo sucedido..."></textarea>
+                            <label for="f-detalle" class="block text-sm font-bold text-stone-700 mb-1">Detalle del suceso *</label>
+                            <textarea id="f-detalle" name="Detalle" rows="4" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none resize-none" placeholder="Describe claramente lo sucedido..."></textarea>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-stone-700 mb-1">Pedido del consumidor *</label>
-                            <textarea name="Pedido" rows="2" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none resize-none" placeholder="¿Qué solicitas como solución?"></textarea>
+                            <label for="f-pedido" class="block text-sm font-bold text-stone-700 mb-1">Pedido del consumidor *</label>
+                            <textarea id="f-pedido" name="Pedido" rows="2" required class="w-full bg-stone-50 border border-stone-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-amber-500 outline-none resize-none" placeholder="¿Qué solicitas como solución?"></textarea>
                         </div>
                     </div>
-                </div>
+                </fieldset>
 
-                <div class="bg-stone-100 p-4 rounded-xl text-xs text-stone-500 text-justify">
+                <div class="bg-stone-100 p-4 rounded-xl text-xs text-stone-600 text-justify">
                     * La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.<br>
                     * El proveedor deberá dar respuesta al reclamo en un plazo no mayor a quince (15) días hábiles improrrogables.
                 </div>
 
-                <button type="submit" class="w-full bg-stone-900 hover:bg-black text-white font-bold py-4 rounded-xl transition-colors shadow-lg flex items-center justify-center gap-2">
-                    <i data-lucide="send" class="w-5 h-5"></i> Enviar Formulario
+                <label class="flex items-start gap-3 text-sm text-stone-700 cursor-pointer">
+                    <input type="checkbox" id="f-consent" required class="accent-amber-600 mt-1">
+                    <span>Declaro que los datos consignados son veraces y autorizo su tratamiento para atender este reclamo, conforme a la <a href="privacidad.html" class="underline text-amber-800">Política de privacidad</a>. *</span>
+                </label>
+
+                <p id="form-error" role="alert" class="hidden bg-red-50 border border-red-200 text-red-800 text-sm rounded-xl p-4"></p>
+
+                <button type="submit" id="btn-enviar" class="w-full bg-stone-900 hover:bg-black text-white font-bold py-4 rounded-xl transition-colors shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                    <svg class="ic w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><use href="#send"/></svg> <span id="btn-texto">Enviar formulario</span>
                 </button>
             </form>
+
+            <!-- Constancia (se muestra al enviar correctamente) -->
+            <div id="constancia" class="hidden" aria-live="polite" tabindex="-1">
+                <div class="flex items-center gap-3 text-green-800 bg-green-50 border border-green-200 rounded-xl p-4">
+                    <svg class="ic w-8 h-8 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg>
+                    <p class="font-bold">Recibimos tu <span id="c-tipo">reclamo</span> correctamente.</p>
+                </div>
+                <h2 class="text-xl font-black text-stone-900 uppercase mt-6">Hoja de reclamación</h2>
+                <dl class="mt-4 divide-y divide-stone-200 text-sm">
+                    <div class="py-2 flex flex-col sm:flex-row sm:gap-4"><dt class="font-bold sm:w-56 shrink-0">Código</dt><dd id="c-codigo"></dd></div>
+                    <div class="py-2 flex flex-col sm:flex-row sm:gap-4"><dt class="font-bold sm:w-56 shrink-0">Fecha de registro</dt><dd id="c-fecha"></dd></div>
+                    <div class="py-2 flex flex-col sm:flex-row sm:gap-4"><dt class="font-bold sm:w-56 shrink-0">Consumidor</dt><dd id="c-nombre"></dd></div>
+                    <div class="py-2 flex flex-col sm:flex-row sm:gap-4"><dt class="font-bold sm:w-56 shrink-0">Documento</dt><dd id="c-doc"></dd></div>
+                    <div class="py-2 flex flex-col sm:flex-row sm:gap-4"><dt class="font-bold sm:w-56 shrink-0">Servicio</dt><dd id="c-servicio"></dd></div>
+                    <div class="py-2 flex flex-col sm:flex-row sm:gap-4"><dt class="font-bold sm:w-56 shrink-0">Monto reclamado</dt><dd id="c-monto"></dd></div>
+                    <div class="py-2 flex flex-col sm:flex-row sm:gap-4"><dt class="font-bold sm:w-56 shrink-0">Detalle</dt><dd id="c-detalle" class="whitespace-pre-line"></dd></div>
+                    <div class="py-2 flex flex-col sm:flex-row sm:gap-4"><dt class="font-bold sm:w-56 shrink-0">Pedido</dt><dd id="c-pedido" class="whitespace-pre-line"></dd></div>
+                </dl>
+                <p class="mt-6 text-sm text-stone-600">Guarda o imprime esta constancia. Te responderemos al correo que indicaste en un plazo no mayor a quince (15) días hábiles.</p>
+                <div class="no-imprimir mt-6 flex flex-col sm:flex-row gap-3">
+                    <button type="button" id="btn-imprimir" class="flex-1 bg-stone-900 hover:bg-black text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2"><svg class="ic w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><use href="#printer"/></svg> Imprimir o guardar en PDF</button>
+                    <a href="index.html" class="flex-1 text-center border border-stone-300 hover:bg-stone-100 font-bold py-3 rounded-xl">Volver al inicio</a>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer class="bg-[#1A0F0A] text-stone-500 py-8 text-center text-sm mt-auto">
-        <p>© 2026 Casas de Campo Cieneguilla. RUC: 10420042821</p>
+    <footer class="bg-[#1A0F0A] text-stone-400 py-8 text-center text-sm mt-auto">
+        <p>© 2026 Casa de Campo en Cieneguilla. RUC: 10420042821</p>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+    (function () {
+        'use strict';
+        var form = document.getElementById('form-reclamo');
+        var btn = document.getElementById('btn-enviar');
+        var btnTexto = document.getElementById('btn-texto');
+        var errorBox = document.getElementById('form-error');
+        var constancia = document.getElementById('constancia');
+        var CORREO = 'casajardinencantado@gmail.com';
+        var WSP = 'https://wa.me/51959571464?text=Hola,%20quiero%20registrar%20un%20reclamo.';
+
+        function dos(n) { return (n < 10 ? '0' : '') + n; }
+        function codigo() {
+            var d = new Date();
+            var azar = Math.random().toString(36).slice(2, 6).toUpperCase();
+            return 'RC-' + d.getFullYear() + dos(d.getMonth() + 1) + dos(d.getDate()) + '-' + dos(d.getHours()) + dos(d.getMinutes()) + '-' + azar;
+        }
+        function fechaLegible() {
+            var d = new Date();
+            return dos(d.getDate()) + '/' + dos(d.getMonth() + 1) + '/' + d.getFullYear() + ' ' + dos(d.getHours()) + ':' + dos(d.getMinutes());
+        }
+        function val(name) { var el = form.elements[name]; return el ? el.value : ''; }
+        function poner(id, texto) { document.getElementById(id).textContent = texto; }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            errorBox.classList.add('hidden');
+
+            var cod = codigo();
+            var fecha = fechaLegible();
+            document.getElementById('campo-codigo').value = cod;
+            document.getElementById('campo-fecha').value = fecha;
+
+            btn.disabled = true;
+            btnTexto.textContent = 'Enviando...';
+
+            fetch('https://formsubmit.co/ajax/' + CORREO, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form)
+            })
+            .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, datos: j }; }); })
+            .then(function (res) {
+                if (!res.ok || String(res.datos.success) !== 'true') throw new Error((res.datos && res.datos.message) || 'Error');
+                poner('c-tipo', val('Tipo').toLowerCase());
+                poner('c-codigo', cod);
+                poner('c-fecha', fecha);
+                poner('c-nombre', val('name'));
+                poner('c-doc', val('Tipo de documento') + ' ' + val('Numero de documento'));
+                poner('c-servicio', val('Servicio contratado') + ' (' + val('Fecha del servicio') + ')');
+                poner('c-monto', val('Monto reclamado') ? 'S/ ' + val('Monto reclamado') : 'No indicado');
+                poner('c-detalle', val('Detalle'));
+                poner('c-pedido', val('Pedido'));
+                form.classList.add('hidden');
+                constancia.classList.remove('hidden');
+                constancia.focus();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            })
+            .catch(function () {
+                errorBox.innerHTML = 'No pudimos enviar tu reclamo en este momento. Por favor inténtalo nuevamente, o regístralo escribiéndonos a <a class="underline font-bold" href="mailto:' + CORREO + '">' + CORREO + '</a> o por <a class="underline font-bold" target="_blank" rel="noopener" href="' + WSP + '">WhatsApp</a>.';
+                errorBox.classList.remove('hidden');
+                btn.disabled = false;
+                btnTexto.textContent = 'Enviar formulario';
+            });
+        });
+
+        document.getElementById('btn-imprimir').addEventListener('click', function () { window.print(); });
+    })();
+    </script>
 </body>
 </html>

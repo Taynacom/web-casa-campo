@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://casasdecampocieneguilla.com/</loc>
+    <loc>https://www.casasdecampocieneguilla.com/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.casasdecampocieneguilla.com/images/foto-principal.webp</image:loc>
+      <image:title>Casa de campo con piscina en Cieneguilla</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.casasdecampocieneguilla.com/images/zona-relax-1.webp</image:loc>
+      <image:title>Piscina y zona de relax de la casa de campo en Cieneguilla</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.casasdecampocieneguilla.com/images/zona-cocina-1.webp</image:loc>
+      <image:title>Cocina y zona gastronómica de la casa de campo en Cieneguilla</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.casasdecampocieneguilla.com/images/zona-diversion-1.webp</image:loc>
+      <image:title>Zona de entretenimiento de la casa de campo en Cieneguilla</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.casasdecampocieneguilla.com/images/fachada.webp</image:loc>
+      <image:title>Fachada de la casa de campo en Cieneguilla</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://casasdecampocieneguilla.com/terminos.html</loc>
-    <priority>0.8</priority>
+    <loc>https://www.casasdecampocieneguilla.com/terminos</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://casasdecampocieneguilla.com/privacidad.html</loc>
-    <priority>0.8</priority>
+    <loc>https://www.casasdecampocieneguilla.com/privacidad</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://casasdecampocieneguilla.com/reclamaciones.html</loc>
-    <priority>0.8</priority>
+    <loc>https://www.casasdecampocieneguilla.com/reclamaciones</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>

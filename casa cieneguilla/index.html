@@ -1,682 +1,591 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-PE" class="scroll-smooth">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18281856788"></script>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1714022912835558');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1714022912835558&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18281856788');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alquiler de Casa de Campo en Cieneguilla | Trato Directo</title>
-    <meta name="description" content="Reserva tu casa de campo totalmente privada en Cieneguilla. Disfruta de 1,000m² exclusivos con piscina privada, parrilla y horno de barro. Trato directo sin comisiones.">
-    <meta name="keywords" content="casa de campo, Cieneguilla, alquiler, piscina, parrilla, full day, fin de semana, pet friendly, Lima, trato directo">
-    <meta name="robots" content="index, follow">
+    <title>Casa de Campo en Cieneguilla con Piscina | Alquiler Directo</title>
+    <meta name="description" content="Casa de campo privada en Cieneguilla, Lima: piscina, parrilla, horno de barro y 5 habitaciones para hasta 20 personas. Full Day, fin de semana y eventos.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#3E2723">
+    <link rel="canonical" href="https://www.casasdecampocieneguilla.com/">
 
-    <!-- Precarga de LCP optimizada -->
+    <!-- Vista previa al compartir (WhatsApp, Facebook, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="Casa de Campo en Cieneguilla">
+    <meta property="og:title" content="Casa de Campo en Cieneguilla con Piscina | Alquiler Directo">
+    <meta property="og:description" content="Casa de campo privada con piscina, parrilla y 5 habitaciones para hasta 20 personas, a no más de 10 minutos del Óvalo de Cieneguilla. Trato directo.">
+    <meta property="og:url" content="https://www.casasdecampocieneguilla.com/">
+    <meta property="og:image" content="https://www.casasdecampocieneguilla.com/images/vista-previa.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1364">
+    <meta property="og:image:height" content="696">
+    <meta property="og:image:alt" content="Casa de campo con piscina en Cieneguilla, Lima">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casa de Campo en Cieneguilla con Piscina | Alquiler Directo">
+    <meta name="twitter:description" content="Casa de campo privada con piscina, parrilla y 5 habitaciones para hasta 20 personas, en Cieneguilla, Lima.">
+    <meta name="twitter:image" content="https://www.casasdecampocieneguilla.com/images/vista-previa.jpg">
+
+    <link rel="icon" type="image/webp" href="images/vista-previa.webp">
+
+    <!-- Precarga de la imagen principal (LCP) -->
     <link rel="preload" as="image" href="images/foto-principal-movil.webp" media="(max-width: 768px)" fetchpriority="high">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preload" as="image" href="images/foto-principal.webp" media="(min-width: 769px)" fetchpriority="high">
 
-    <meta property="og:title" content="Tu Escapada Perfecta en Cieneguilla | Alquiler Exclusivo">
-    <meta property="og:image" content="https://casasdecampocieneguilla.com/images/vista-previa.webp">
-    <link rel="icon" type="image/jpeg" href="images/vista-previa.webp">
+    <!-- Estilos compilados (Tailwind). Para regenerar: ver LEEME.md -->
+    <link rel="stylesheet" href="styles.css?v=2">
 
-    <!-- Tailwind SIN defer. El diseño debe cargar inmediatamente para evitar logos gigantes y CLS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        @keyframes latido { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-        .animacion-latido { animation: latido 1.8s ease-in-out infinite; }
-        @keyframes resplandor { 0%, 100% { box-shadow: 0 0 10px rgba(180,83,9,0.3); } 50% { box-shadow: 0 0 25px rgba(180,83,9,0.8); } }
-        .animacion-resplandor { animation: resplandor 3s ease-in-out infinite; }
-        @keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        .boton-flotante { animation: flotar 3s ease-in-out infinite; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .scrollbar-visible::-webkit-scrollbar { height: 6px; }
-        .scrollbar-visible::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 10px; }
-        .scrollbar-visible::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 10px; }
-        .scrollbar-visible { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.4) rgba(255,255,255,0.1); }
-        @keyframes scroll-infinito { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 1.5rem)); } }
-        .animacion-scroll { animation: scroll-infinito 25s linear infinite; }
-        .contenedor-carrusel:hover .animacion-scroll { animation-play-state: paused; }
-        .freno-deslizamiento { scroll-snap-stop: always; }
-        @keyframes amagueSeda { 0% { transform: translateX(0); } 30% { transform: translateX(-60px); } 55% { transform: translateX(-60px); } 85% { transform: translateX(3px); } 100% { transform: translateX(0); } }
-        .ejecutar-amague picture { animation: amagueSeda 1.4s cubic-bezier(0.25, 1, 0.5, 1) both; }
-    </style>
+    <!-- Datos estructurados para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "@id": "https://www.casasdecampocieneguilla.com/#casa-de-campo",
+      "name": "Casa de Campo en Cieneguilla",
+      "description": "Casa de campo privada en Cieneguilla, Lima, con piscina, parrilla, horno de barro y 5 habitaciones para hasta 20 personas, a no más de 10 minutos del Óvalo de Cieneguilla. Alquiler Full Day y fin de semana con trato directo. Ideal para bautizos, cumpleaños, fiestas y reuniones privadas.",
+      "url": "https://www.casasdecampocieneguilla.com/",
+      "telephone": "+51959571464",
+      "image": [
+        "https://www.casasdecampocieneguilla.com/images/foto-principal.webp",
+        "https://www.casasdecampocieneguilla.com/images/zona-relax-1.webp",
+        "https://www.casasdecampocieneguilla.com/images/zona-cocina-1.webp",
+        "https://www.casasdecampocieneguilla.com/images/zona-diversion-1.webp"
+      ],
+      "priceRange": "S/ 500 - S/ 1400",
+      "petsAllowed": true,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cieneguilla",
+        "addressRegion": "Lima",
+        "addressCountry": "PE"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Piscina privada", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parrilla", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Horno de barro", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Cochera privada", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Mesa de billar", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Pet friendly", "value": true }
+      ],
+      "containsPlace": {
+        "@type": "Accommodation",
+        "name": "Casa de campo completa",
+        "numberOfRooms": 5,
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 20 }
+      }
+    }
+    </script>
 </head>
 <body class="bg-[#FAFAF9] text-stone-800 antialiased font-sans relative">
+<!-- sprite-iconos -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+<symbol id="images" viewBox="0 0 24 24"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18"/><circle cx="12" cy="8" r="2"/><rect width="16" height="16" x="6" y="2" rx="2"/></symbol>
+<symbol id="map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+<symbol id="phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="book-open" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+<symbol id="arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+<symbol id="send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+<symbol id="chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="move-horizontal" viewBox="0 0 24 24"><path d="m18 8 4 4-4 4"/><path d="M2 12h20"/><path d="m6 8-4 4 4 4"/></symbol>
+<symbol id="hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></symbol>
+<symbol id="printer" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
+<symbol id="play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="maximize-2" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/><path d="M9 21H3v-6"/></symbol>
+<symbol id="zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></symbol>
+<symbol id="zoom-out" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="8" x2="14" y1="11" y2="11"/></symbol>
+<symbol id="fullscreen" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><rect width="10" height="8" x="7" y="8" rx="1"/></symbol>
+<symbol id="wsp" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></symbol>
+</svg>
+<!-- /sprite-iconos -->
 
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-stone-900 text-white p-4 sm:p-5 z-[120] transform translate-y-full transition-transform duration-500 shadow-[0_-10px_20px_rgba(0,0,0,0.3)]">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="text-sm text-stone-300 text-center md:text-left">
-                <p><strong class="text-white">Aviso de Privacidad y Cookies:</strong> Utilizamos cookies propias y de terceros para personalizar el contenido.</p>
+    <a href="#contenido" class="saltar">Saltar al contenido</a>
+
+    <!-- Menú flotante: aparece al bajar de la portada (una sola barra compacta en celular) -->
+    <nav id="nav-flotante" inert aria-label="Menú principal" class="no-imprimir fixed top-0 inset-x-0 z-[90] text-white shadow-lg transform -translate-y-full transition-transform duration-300">
+        <div class="nav-barra">
+            <a href="#inicio" class="nav-marca">Casa de Campo en Cieneguilla</a>
+            <div class="nav-enlaces" id="nav-enlaces">
+                <a href="#instalaciones" class="nav-enlace">Instalaciones</a>
+                <a href="#galeria" class="nav-enlace">Galería</a>
+                <a href="#como-llegar" class="nav-enlace">Ubicación</a>
+                <a href="#tarifas" class="nav-enlace">Tarifas</a>
+                <a href="#preguntas-frecuentes" class="nav-enlace">Preguntas</a>
             </div>
+            <a href="https://wa.me/51959571464?text=Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20realizar%20mi%20reserva." target="_blank" rel="noopener" data-wa class="nav-wsp">
+                <svg class="w-4 h-4 fill-current" aria-hidden="true" viewBox="0 0 24 24"><use href="#wsp"/></svg> WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Aviso de cookies: los rastreadores solo se cargan si se acepta -->
+    <div id="cookie-banner" role="region" aria-label="Aviso de cookies" inert class="fixed bottom-0 left-0 right-0 bg-stone-900 text-white p-4 sm:p-5 z-[120] transform translate-y-full transition-transform duration-500 shadow-[0_-10px_20px_rgba(0,0,0,0.3)]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-stone-300 text-center md:text-left">
+                <strong class="text-white">Cookies y privacidad:</strong> usamos cookies de analítica y publicidad (Google y Meta) solo si las aceptas. <a href="privacidad.html" class="underline hover:text-white">Más información</a>.
+            </p>
             <div class="flex items-center gap-4 whitespace-nowrap">
-                <button onclick="gestionarCookies(false)" class="text-stone-400 hover:text-white text-sm font-medium transition-colors underline">Rechazar</button>
-                <button onclick="gestionarCookies(true)" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded-xl transition-colors shadow-lg">Aceptar cookies</button>
+                <button type="button" data-cookies="rechazar" class="text-stone-300 hover:text-white text-sm font-medium transition-colors underline">Rechazar</button>
+                <button type="button" data-cookies="aceptar" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-6 rounded-xl transition-colors shadow-lg">Aceptar cookies</button>
             </div>
         </div>
     </div>
 
+    <!-- Mensaje flotante de WhatsApp -->
     <div id="tooltip-wsp" class="fixed bottom-24 right-4 sm:right-6 bg-white text-stone-800 p-4 rounded-2xl shadow-2xl z-[100] transform scale-0 opacity-0 origin-bottom-right transition-all duration-500 max-w-[210px] sm:max-w-[240px] border border-stone-200 pointer-events-none">
         <div class="relative">
-            <button onclick="cerrarTooltip()" aria-label="Cerrar mensaje emergente" class="absolute -top-2 -right-2 text-stone-500 hover:text-red-500"><i data-lucide="x" class="w-4 h-4"></i></button>
+            <button type="button" data-cerrar-tooltip aria-label="Cerrar mensaje" class="absolute -top-2 -right-2 text-stone-500 hover:text-red-500"><svg class="ic w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#x"/></svg></button>
             <p class="text-sm font-extrabold leading-tight text-stone-800">¿Tienes alguna duda antes de reservar?</p>
-            <p class="text-xs text-stone-600 mt-2 font-medium">Escríbeme por aquí y te daré un <span class="text-amber-700 font-bold">precio especial</span> 👇</p>
+            <p class="text-xs text-stone-600 mt-2 font-medium">Escríbenos por aquí y te daremos un <span class="text-amber-700 font-bold">precio especial</span> 👇</p>
             <div class="absolute -bottom-6 right-4 w-4 h-4 bg-white transform rotate-45 border-r border-b border-stone-200"></div>
         </div>
     </div>
 
-    <!-- Botón de WhatsApp protegido -->
-    <a href="https://wa.me/51959571464?text=Hola,%20tengo%20una%20duda%20antes%20de%20hacer%20mi%20reserva.%20Vi%20el%20precio%20especial%20en%20la%20web." 
-       target="_blank" 
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51959571464?text=Hola,%20tengo%20una%20duda%20antes%20de%20hacer%20mi%20reserva.%20Vi%20el%20precio%20especial%20en%20la%20web."
+       target="_blank" rel="noopener" data-wa
        aria-label="Contactar por WhatsApp"
-       onclick="fbq('track', 'Lead');"
-       class="fixed bottom-6 right-4 sm:right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] boton-flotante hover:bg-green-500 transition-colors border-2 border-white flex items-center justify-center">
-        <svg class="w-9 h-9 fill-current" aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></svg>
+       class="fixed bottom-6 right-4 sm:right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] hover:bg-green-500 transition-colors border-2 border-white flex items-center justify-center">
+        <svg class="w-9 h-9 fill-current" aria-hidden="true" viewBox="0 0 24 24"><use href="#wsp"/></svg>
     </a>
 
-    <header class="relative h-[85vh] flex items-center justify-center bg-[#3E2723] overflow-hidden">
+    <header id="inicio" class="relative h-[85vh] min-h-[560px] flex items-center justify-center bg-[#3E2723] overflow-hidden">
         <picture class="absolute inset-0 w-full h-full">
             <source media="(max-width: 768px)" srcset="images/foto-principal-movil.webp">
-            <img src="images/foto-principal.webp" alt="Casa de Campo en Cieneguilla" width="1920" height="1080" fetchpriority="high" class="w-full h-full object-cover opacity-75">
+            <img src="images/foto-principal.webp" alt="Casa de campo con piscina en Cieneguilla, Lima" width="1920" height="1080" fetchpriority="high" class="w-full h-full object-cover opacity-75">
         </picture>
         <div class="absolute inset-0 bg-black/40"></div>
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <span class="inline-block bg-amber-700 text-white text-sm uppercase tracking-widest font-black px-6 py-2.5 rounded-full animacion-resplandor border border-amber-600/50">Alquiler Exclusivo</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 tracking-tight drop-shadow-xl">Tu Escapada Perfecta en Cieneguilla</h1>
-            <p class="text-lg md:text-xl text-stone-100 mt-6 max-w-2xl mx-auto font-medium drop-shadow-md">Sin intermediarios ni comisiones ocultas. Vive una escapada de ensueño y disfruta de un espacio diseñado para tu total desconexión.</p>
+            <span class="inline-block bg-amber-700 text-white text-sm uppercase tracking-widest font-black px-6 py-2.5 rounded-full border border-amber-600/50">Alquiler exclusivo</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 tracking-tight drop-shadow-xl">Casa de Campo en Cieneguilla con Piscina Privada</h1>
+            <p class="text-lg md:text-xl text-stone-100 mt-6 max-w-2xl mx-auto font-medium drop-shadow-md">Alquiler directo, sin intermediarios ni comisiones ocultas. 1,000 m² para desconectarte con tu familia y amigos, en Cieneguilla, Lima.</p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/51959571464?text=Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20realizar%20mi%20reserva." target="_blank" onclick="fbq('track', 'Lead');" class="animacion-latido bg-amber-700 hover:bg-amber-800 text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(180,83,9,0.5)] transition-colors text-center flex items-center justify-center gap-3">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.388 0 12.036c0 2.124.553 4.195 1.604 6.012L.113 23.493l5.58-1.464a11.967 11.967 0 006.338 1.802h.005c6.645 0 12.035-5.388 12.035-12.036C24.071 5.388 18.676 0 12.031 0zm0 21.826a9.94 9.94 0 01-5.074-1.39l-.364-.216-3.771.99.998-3.676-.237-.377A9.957 9.957 0 012.006 12.036c0-5.523 4.492-10.016 10.025-10.016 5.534 0 10.026 4.493 10.026 10.016 0 5.522-4.492 10.016-10.026 10.016zm5.485-7.494c-.302-.151-1.782-.879-2.059-.979-.276-.1-.478-.151-.678.151-.202.302-.779.979-.955 1.18-.176.202-.352.227-.654.076-1.272-.64-2.42-1.488-3.329-2.46-.554-.593-1.042-1.258-1.45-1.974-.176-.302-.019-.465.132-.616.136-.135.302-.352.453-.528.151-.176.202-.302.302-.503.1-.202.051-.378-.025-.529-.076-.151-.678-1.636-.929-2.24-.246-.59-.496-.51-.678-.52-.176-.01-.378-.01-.58-.01-.201 0-.528.076-.805.378-.276.302-1.056 1.032-1.056 2.518 0 1.486 1.082 2.922 1.233 3.123.151.202 2.126 3.243 5.15 4.545.719.31 1.28.495 1.716.634.721.23 1.378.197 1.895.12.576-.086 1.782-.728 2.033-1.433.251-.704.251-1.309.176-1.433-.075-.126-.276-.202-.578-.353z"/></svg>
+                <a href="https://wa.me/51959571464?text=Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20realizar%20mi%20reserva." target="_blank" rel="noopener" data-wa class="animacion-latido bg-amber-700 hover:bg-amber-800 text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(180,83,9,0.5)] transition-colors text-center flex items-center justify-center gap-3">
+                    <svg class="w-6 h-6 fill-current" aria-hidden="true" viewBox="0 0 24 24"><use href="#wsp"/></svg>
                     Reservar por WhatsApp
                 </a>
             </div>
+            <a href="#como-llegar" class="mt-6 inline-flex items-center gap-2 text-stone-100 hover:text-white font-semibold underline underline-offset-4 drop-shadow-md">
+                <svg class="ic w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><use href="#map-pin"/></svg> Cieneguilla, Lima · Ver ubicación y cómo llegar
+            </a>
         </div>
     </header>
 
-    <main>
-        <section class="max-w-6xl mx-auto px-4 -mt-16 relative z-20">
+    <main id="contenido">
+        <section class="max-w-6xl mx-auto px-4 -mt-16 relative z-20" aria-label="Datos principales">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="bg-white p-6 rounded-2xl shadow-xl text-center border-b-4 border-amber-800">
                     <p class="text-3xl font-black text-amber-900">1,000 m²</p>
-                    <p class="text-sm text-stone-500 font-bold mt-1 uppercase tracking-wide">Área Total</p>
+                    <p class="text-sm text-stone-600 font-bold mt-1 uppercase tracking-wide">Área total</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-xl text-center border-b-4 border-amber-800">
                     <p class="text-3xl font-black text-amber-900">Hasta 20</p>
-                    <p class="text-sm text-stone-500 font-bold mt-1 uppercase tracking-wide">Personas</p>
+                    <p class="text-sm text-stone-600 font-bold mt-1 uppercase tracking-wide">Personas</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-xl text-center border-b-4 border-amber-800">
-                    <p class="text-2xl font-black text-amber-900 leading-none mt-1">Trato Directo</p>
-                    <p class="text-sm text-stone-500 font-bold mt-2 uppercase tracking-wide">Sin Intermediarios</p>
+                    <p class="text-2xl font-black text-amber-900 leading-none mt-1">Trato directo</p>
+                    <p class="text-sm text-stone-600 font-bold mt-2 uppercase tracking-wide">Sin intermediarios</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-xl text-center border-b-4 border-amber-800">
-                    <p class="text-3xl font-black text-amber-900">+4 Años</p>
-                    <p class="text-sm text-stone-500 font-bold mt-1 uppercase tracking-wide">De Experiencia</p>
+                    <p class="text-3xl font-black text-amber-900">+5 años</p>
+                    <p class="text-sm text-stone-600 font-bold mt-1 uppercase tracking-wide">De experiencia</p>
                 </div>
             </div>
         </section>
 
-        <section class="max-w-6xl mx-auto px-4 py-24">
+        <!-- Presentación (texto para personas y para buscadores) -->
+        <section class="max-w-3xl mx-auto px-4 pt-24 text-center">
+            <p class="text-lg text-stone-600 mt-6 leading-relaxed">Si buscas una casa de campo en Cieneguilla para pasar un día completo o un fin de semana, aquí tienes un espacio 100% privado de 1,000 m² con piscina, jardines con árboles frutales, zona de parrilla, horno de barro y 5 habitaciones para recibir hasta 20 personas.</p>
+            <p class="text-lg text-stone-600 mt-4 leading-relaxed">Alquilamos de forma directa: coordinas fechas y detalles por WhatsApp, sin comisiones ocultas, y emitimos boleta de venta electrónica. Es una casa de campo pet friendly, ideal para cumpleaños, bautizos, reuniones familiares y escapadas con amigos. Todo es flexible: cuéntanos cuántos son y armamos la mejor opción para tu grupo.</p>
+        </section>
+
+        <section id="instalaciones" class="scroll-mt-20 max-w-6xl mx-auto px-4 py-24">
             <div class="text-center max-w-2xl mx-auto mb-20">
                 <h2 class="text-4xl font-extrabold text-stone-900 tracking-tight">Todo lo que necesitas</h2>
-                <p class="text-lg text-stone-500 mt-4">Nuestras instalaciones están equipadas al detalle para que no te falte nada.</p>
+                <p class="text-lg text-stone-600 mt-4">Instalaciones equipadas al detalle para que no te falte nada.</p>
             </div>
 
+            <!-- Piscina y relax -->
             <div class="flex flex-col md:flex-row items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
-                    <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-relax"></div>
-                    <div id="carrusel-relax" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        
+                    <div class="absolute inset-0 pointer-events-none flex items-center justify-center gap-2 z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-relax"></div>
+                    <div id="carrusel-relax" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth" data-prefijo="zona-relax" data-alt="Piscina y zona de relax de la casa de campo en Cieneguilla">
                         <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
                             <source media="(max-width: 768px)" srcset="images/zona-relax-1-small.webp">
-                            <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
+                            <img src="images/zona-relax-1.webp" alt="Piscina y zona de relax de la casa de campo en Cieneguilla, foto 1" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover">
                         </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-relax-2-small.webp">
-                            <img src="images/zona-relax-2.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-relax-3-small.webp">
-                            <img src="images/zona-relax-3.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-relax-1-small.webp">
-                            <img src="images/zona-relax-1.webp" alt="Piscina y relax" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-
                     </div>
-                    <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-relax', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
-                    <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-relax', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
+                    <button type="button" aria-label="Foto anterior" data-mover="carrusel-relax:-1" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden md:block md:opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity text-stone-800 z-20"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-left"/></svg></button>
+                    <button type="button" aria-label="Foto siguiente" data-mover="carrusel-relax:1" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden md:block md:opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity text-stone-800 z-20"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-right"/></svg></button>
+                    <button type="button" aria-label="Ver las fotos en pantalla completa" data-ampliar="carrusel-relax" class="carrusel-ampliar"><svg class="ic w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><use href="#maximize-2"/></svg></button>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl font-bold text-stone-900 mb-4">Piscina, Naturaleza y Relax</h3>
+                    <h3 class="text-3xl font-bold text-stone-900 mb-4">Piscina, naturaleza y relax</h3>
                     <p class="text-stone-600 mb-6">Un paraíso rodeado de árboles frutales. Refresca tus tardes bajo el sol y desconecta del ruido de la ciudad.</p>
                     <ul class="space-y-3 text-stone-700 font-medium">
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span>Piscina grande (10x4.5m) con baños exteriores.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span>Amplios jardines y zona de hamacas.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span>Somos Pet Friendly 🐾</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span>Cochera amplia y privada dentro de la casa.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span>Piscina grande de 10 × 4.5 m con baños exteriores.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span>Amplios jardines y zona de hamacas.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span>Pet friendly: tus mascotas son bienvenidas 🐾</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span>Cochera amplia y privada dentro de la casa.</span></li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Cocina y gastronomía -->
             <div class="flex flex-col md:flex-row-reverse items-center gap-10 mb-20">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
-                    <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-cocina"></div>
-                    <div id="carrusel-cocina" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        
+                    <div class="absolute inset-0 pointer-events-none flex items-center justify-center gap-2 z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-cocina"></div>
+                    <div id="carrusel-cocina" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth" data-prefijo="zona-cocina" data-alt="Cocina y zona gastronómica de la casa de campo en Cieneguilla">
                         <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
                             <source media="(max-width: 768px)" srcset="images/zona-cocina-1-small.webp">
-                            <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
+                            <img src="images/zona-cocina-1.webp" alt="Cocina y zona gastronómica de la casa de campo en Cieneguilla, foto 1" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover">
                         </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-cocina-2-small.webp">
-                            <img src="images/zona-cocina-2.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-cocina-3-small.webp">
-                            <img src="images/zona-cocina-3.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-cocina-1-small.webp">
-                            <img src="images/zona-cocina-1.webp" alt="Cocina y Gastronomía" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-
                     </div>
-                    <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-cocina', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
-                    <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-cocina', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
+                    <button type="button" aria-label="Foto anterior" data-mover="carrusel-cocina:-1" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden md:block md:opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity text-stone-800 z-20"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-left"/></svg></button>
+                    <button type="button" aria-label="Foto siguiente" data-mover="carrusel-cocina:1" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden md:block md:opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity text-stone-800 z-20"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-right"/></svg></button>
+                    <button type="button" aria-label="Ver las fotos en pantalla completa" data-ampliar="carrusel-cocina" class="carrusel-ampliar"><svg class="ic w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><use href="#maximize-2"/></svg></button>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl font-bold text-stone-900 mb-4">Gastronomía a lo Grande</h3>
-                    <p class="text-stone-600 mb-6">Tanto en interiores como exteriores, tienes equipamiento de sobra para preparar los mejores banquetes campestres.</p>
+                    <h3 class="text-3xl font-bold text-stone-900 mb-4">Gastronomía a lo grande</h3>
+                    <p class="text-stone-600 mb-6">Tanto en interiores como en exteriores, tienes equipamiento de sobra para preparar los mejores banquetes campestres.</p>
                     <ul class="space-y-3 text-stone-700 font-medium">
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span>Gran horno de barro para pizzas y gran caja china.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span>Dos áreas de preparación: Cocina exterior industrial y cocina interior equipada.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span>Zona de parrilla completa para tus almuerzos campestres.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span>Múltiples equipos de frío: Refrigeradora y congeladoras extra.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span>Horno de barro para pizzas y caja china.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span>Dos áreas de preparación: cocina exterior industrial y cocina interior equipada.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span>Zona de parrilla completa para tus almuerzos campestres.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span>Equipos de frío: refrigeradora y congeladoras adicionales.</span></li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Entretenimiento y confort -->
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/2 relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-80 bg-stone-100 flex items-center justify-center">
-                    <div class="absolute inset-0 pointer-events-none flex items-center justify-center z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-diversion"></div>
-                    <div id="carrusel-diversion" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth">
-                        
+                    <div class="absolute inset-0 pointer-events-none flex items-center justify-center gap-2 z-10 md:hidden font-extrabold text-white/90 opacity-0 transition-opacity duration-300 drop-shadow-md" id="hint-diversion"></div>
+                    <div id="carrusel-diversion" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-full w-full scroll-smooth" data-prefijo="zona-diversion" data-alt="Zona de entretenimiento de la casa de campo en Cieneguilla">
                         <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
                             <source media="(max-width: 768px)" srcset="images/zona-diversion-1-small.webp">
-                            <img src="images/zona-diversion-1.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
+                            <img src="images/zona-diversion-1.webp" alt="Zona de entretenimiento de la casa de campo en Cieneguilla, foto 1" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover">
                         </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-2-small.webp">
-                            <img src="images/zona-diversion-2.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-3-small.webp">
-                            <img src="images/zona-diversion-3.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-4-small.webp">
-                            <img src="images/zona-diversion-4.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-5-small.webp">
-                            <img src="images/zona-diversion-5.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-                        <picture class="block freno-deslizamiento w-full flex-shrink-0 snap-center h-full">
-                            <source media="(max-width: 768px)" srcset="images/zona-diversion-1-small.webp">
-                            <img src="images/zona-diversion-1.webp" alt="Entretenimiento" loading="lazy" width="600" height="400" class="w-full h-full object-cover">
-                        </picture>
-
                     </div>
-                    <button aria-label="Anterior foto" onclick="moverCarrusel('carrusel-diversion', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-left"></i></button>
-                    <button aria-label="Siguiente foto" onclick="moverCarrusel('carrusel-diversion', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden group-hover:block text-stone-800 z-20"><i data-lucide="chevron-right"></i></button>
+                    <button type="button" aria-label="Foto anterior" data-mover="carrusel-diversion:-1" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden md:block md:opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity text-stone-800 z-20"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-left"/></svg></button>
+                    <button type="button" aria-label="Foto siguiente" data-mover="carrusel-diversion:1" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg hidden md:block md:opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity text-stone-800 z-20"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-right"/></svg></button>
+                    <button type="button" aria-label="Ver las fotos en pantalla completa" data-ampliar="carrusel-diversion" class="carrusel-ampliar"><svg class="ic w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><use href="#maximize-2"/></svg></button>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl font-bold text-stone-900 mb-4">Entretenimiento y Confort Interior</h3>
-                    <p class="text-stone-600 mb-6">La casa está rodeada de árboles, creando un ambiente de naturaleza perfecto para festejar con privacidad al 100% o simplemente descansar en paz.</p>
+                    <h3 class="text-3xl font-bold text-stone-900 mb-4">Entretenimiento y confort interior</h3>
+                    <p class="text-stone-600 mb-6">La casa está rodeada de árboles, un entorno natural perfecto para festejar con total privacidad o simplemente descansar en paz.</p>
                     <ul class="space-y-4 text-stone-700 font-medium">
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span><strong>Sonido y TV:</strong> Equipo de sonido conectado a una Smart TV (Roku TV) listo para tu música.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span><strong>Privacidad al 100%:</strong> Entorno privado gracias a la naturaleza que rodea la casa.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span><strong>Diversión total:</strong> Mesa de Billar, juego de sapo y saltarín para niños.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-amber-700 mt-1 shrink-0"></i> <span><strong>Descanso:</strong> 5 habitaciones cómodas y baños con agua caliente.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span><strong>Sonido y TV:</strong> equipo de sonido conectado a una Smart TV (Roku TV), listo para tu música.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span><strong>Privacidad total:</strong> un entorno reservado gracias a la naturaleza que rodea la casa.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span><strong>Diversión para todos:</strong> mesa de billar, juego de sapo y saltarín para niños.</span></li>
+                        <li class="flex items-start gap-3"><svg class="ic w-6 h-6 text-amber-700 mt-0.5 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><use href="#circle-check"/></svg> <span><strong>Descanso:</strong> 5 habitaciones cómodas y baños con agua caliente.</span></li>
                     </ul>
                 </div>
             </div>
         </section>
-<!-- SECCIÓN DE VIDEO -->
-        <section class="py-24 bg-[#FAFAF9] border-y border-stone-200">
+
+
+
+        <!-- Video -->
+        <section id="video" class="py-24 bg-[#FAFAF9] border-y border-stone-200">
             <div class="max-w-5xl mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-extrabold text-stone-900">Conoce tu próximo destino</h2>
-                    <p class="text-lg text-stone-600 mt-4">Sube el volumen y da un paseo virtual por nuestras instalaciones. La tranquilidad te espera.</p>
+                    <p class="text-lg text-stone-600 mt-4">Sube el volumen y da un paseo virtual por la casa de campo. La tranquilidad te espera.</p>
                 </div>
-                
-                <div class="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-200">
-                    <iframe 
-                        loading="lazy"
-                        class="absolute top-0 left-0 w-full h-full" 
-                        src="https://www.youtube.com/embed/lAQsM342oDk?rel=0" 
-                        title="Recorrido Casa de Campo Cieneguilla" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
+
+                <div class="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-900">
+                    <button type="button" data-yt="lAQsM342oDk" data-titulo="Recorrido por la casa de campo en Cieneguilla" aria-label="Reproducir el video: recorrido por la casa de campo en Cieneguilla" class="group absolute inset-0 w-full h-full">
+                        <img src="https://i.ytimg.com/vi/lAQsM342oDk/hqdefault.jpg" alt="Miniatura del video del recorrido por la casa de campo en Cieneguilla" loading="lazy" decoding="async" width="480" height="360" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        <span class="absolute inset-0 flex items-center justify-center">
+                            <span class="bg-amber-700 group-hover:bg-amber-800 text-white rounded-full w-20 h-20 flex items-center justify-center shadow-2xl transition-colors">
+                                <svg class="ic fill-current w-9 h-9 ml-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg>
+                            </span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </section>
-        <section class="bg-white py-24 overflow-hidden">
+
+        <!-- Reseñas -->
+        <section id="resenas" class="bg-white py-24 overflow-hidden">
             <div class="max-w-6xl mx-auto px-4 text-center mb-12">
                 <div class="flex justify-center items-center gap-3 mb-4">
-                    <i data-lucide="star" class="w-8 h-8 md:w-10 md:h-10 text-amber-500 fill-current mb-1"></i> 
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-stone-900">5.0 Estrellas</h2>
-                    <i data-lucide="star" class="w-8 h-8 md:w-10 md:h-10 text-amber-500 fill-current mb-1"></i>
+                    <svg class="ic fill-current w-8 h-8 md:w-10 md:h-10 text-amber-500 mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-stone-900">5.0 estrellas</h2>
+                    <svg class="ic fill-current w-8 h-8 md:w-10 md:h-10 text-amber-500 mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg>
                 </div>
                 <p class="text-xl text-stone-800 font-extrabold tracking-wide uppercase">Favorito entre huéspedes</p>
-                <p class="text-stone-500 mt-2">Mira lo que dicen de nosotros.</p>
+                <p class="text-stone-600 mt-2">Opiniones reales de huéspedes en Airbnb.</p>
             </div>
 
             <div class="relative w-full overflow-hidden flex gap-6 contenedor-carrusel">
-                <div class="flex gap-6 animacion-scroll w-max shrink-0">
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">R</div>
+                <div id="resenas-pista" class="flex gap-6 animacion-scroll w-max shrink-0">
+                    <figure class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+                        <figcaption class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl" aria-hidden="true">R</div>
                             <div>
-                                <h3 class="font-bold text-stone-900">Roxana Anaí</h3>
-                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                                <p class="font-bold text-stone-900">Roxana Anaí</p>
+                                <div class="flex text-amber-500" role="img" aria-label="5 de 5 estrellas"><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg></div>
                             </div>
-                        </div>
-                        <p class="text-stone-600 text-sm italic">"Un lugar muy bonito y acogedor, ideal para disfrutar en familia... Nos encantó todo, la música que se escucha en todos los ambientes. Fuimos 20 personas y estuvimos muy cómodos."</p>
-                    </div>
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">V</div>
+                        </figcaption>
+                        <blockquote class="text-stone-600 text-sm italic">"Un lugar muy bonito y acogedor, ideal para disfrutar en familia... Nos encantó todo, la música que se escucha en todos los ambientes. Fuimos 20 personas y estuvimos muy cómodos."</blockquote>
+                        <p class="text-xs text-stone-500 mt-4">Reseña en Airbnb</p>
+                    </figure>
+                    <figure class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+                        <figcaption class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl" aria-hidden="true">V</div>
                             <div>
-                                <h3 class="font-bold text-stone-900">Viviana Mariel</h3>
-                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                                <p class="font-bold text-stone-900">Viviana Mariel</p>
+                                <div class="flex text-amber-500" role="img" aria-label="5 de 5 estrellas"><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg></div>
                             </div>
-                        </div>
-                        <p class="text-stone-600 text-sm italic">"Recomendable, han cuidado mucho la decoración con las plantas y eso le da un lindo paisaje interior. Tiene todo para pasar un agradable fin de semana."</p>
-                    </div>
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">I</div>
+                        </figcaption>
+                        <blockquote class="text-stone-600 text-sm italic">"Recomendable, han cuidado mucho la decoración con las plantas y eso le da un lindo paisaje interior. Tiene todo para pasar un agradable fin de semana."</blockquote>
+                        <p class="text-xs text-stone-500 mt-4">Reseña en Airbnb</p>
+                    </figure>
+                    <figure class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+                        <figcaption class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl" aria-hidden="true">I</div>
                             <div>
-                                <h3 class="font-bold text-stone-900">Ilva</h3>
-                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                                <p class="font-bold text-stone-900">Ilva</p>
+                                <div class="flex text-amber-500" role="img" aria-label="5 de 5 estrellas"><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg></div>
                             </div>
-                        </div>
-                        <p class="text-stone-600 text-sm italic">"La casa estuvo impecable y acogedora, tenía todo no faltó nada, volveré a ir. Muy contenta con la visita, cuidan muy bien la casa."</p>
-                    </div>
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">C</div>
+                        </figcaption>
+                        <blockquote class="text-stone-600 text-sm italic">"La casa estuvo impecable y acogedora, tenía todo no faltó nada, volveré a ir. Muy contenta con la visita, cuidan muy bien la casa."</blockquote>
+                        <p class="text-xs text-stone-500 mt-4">Reseña en Airbnb</p>
+                    </figure>
+                    <figure class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
+                        <figcaption class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl" aria-hidden="true">C</div>
                             <div>
-                                <h3 class="font-bold text-stone-900">Christian</h3>
-                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                                <p class="font-bold text-stone-900">Christian</p>
+                                <div class="flex text-amber-500" role="img" aria-label="5 de 5 estrellas"><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg><svg class="ic fill-current w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg></div>
                             </div>
-                        </div>
-                        <p class="text-stone-600 text-sm italic">"Lugar con privacidad y gran ambiente de tranquilidad, altamente coincide con todo lo descrito. Un gusto alojarnos."</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-6 animacion-scroll w-max shrink-0">
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">R</div>
-                            <div>
-                                <h3 class="font-bold text-stone-900">Roxana Anaí</h3>
-                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                            </div>
-                        </div>
-                        <p class="text-stone-600 text-sm italic">"Un lugar muy bonito y acogedor, ideal para disfrutar en familia... Nos encantó todo, la música que se escucha en todos los ambientes. Fuimos 20 personas y estuvimos muy cómodos."</p>
-                    </div>
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">V</div>
-                            <div>
-                                <h3 class="font-bold text-stone-900">Viviana Mariel</h3>
-                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                            </div>
-                        </div>
-                        <p class="text-stone-600 text-sm italic">"Recomendable, han cuidado mucho la decoración con las plantas y eso le da un lindo paisaje interior. Tiene todo para pasar un agradable fin de semana."</p>
-                    </div>
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">I</div>
-                            <div>
-                                <h3 class="font-bold text-stone-900">Ilva</h3>
-                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                            </div>
-                        </div>
-                        <p class="text-stone-600 text-sm italic">"La casa estuvo impecable y acogedora, tenía todo no faltó nada, volveré a ir. Muy contenta con la visita, cuidan muy bien la casa."</p>
-                    </div>
-                    <div class="bg-[#FAFAF9] p-8 rounded-3xl border border-stone-200 w-80 flex-shrink-0 shadow-sm">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center font-bold text-amber-800 text-xl">C</div>
-                            <div>
-                                <h3 class="font-bold text-stone-900">Christian</h3>
-                                <div class="flex text-amber-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                            </div>
-                        </div>
-                        <p class="text-stone-600 text-sm italic">"Lugar con privacidad y gran ambiente de tranquilidad, altamente coincide con todo lo descrito. Un gusto alojarnos."</p>
-                    </div>
+                        </figcaption>
+                        <blockquote class="text-stone-600 text-sm italic">"Lugar con privacidad y gran ambiente de tranquilidad, altamente coincide con todo lo descrito. Un gusto alojarnos."</blockquote>
+                        <p class="text-xs text-stone-500 mt-4">Reseña en Airbnb</p>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <!-- GALERÍA EXPANDIBLE -->
-        <section class="bg-[#EFEBE9] py-24 border-y border-stone-300">
+        <!-- Galería -->
+        <section id="galeria" class="scroll-mt-20 bg-[#EFEBE9] py-24 border-y border-stone-300">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center max-w-2xl mx-auto mb-16">
                     <h2 class="text-4xl font-extrabold text-stone-900">Explora cada rincón</h2>
+                    <p class="text-lg text-stone-600 mt-4">Mira las fotos de la casa de campo, la piscina y las zonas de diversión.</p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div onclick="abrirGaleria('galeria_interiores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
+                    <button type="button" data-galeria="galeria_interiores" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 w-full text-left border-4 border-transparent hover:border-amber-700 focus-visible:border-amber-700 transition-all duration-300">
                         <picture class="absolute inset-0 w-full h-full block">
                             <source media="(max-width: 768px)" srcset="images/galeria-interiores-1-small.webp">
-                            <img src="images/galeria-interiores-1.webp" alt="Interiores de la casa de campo" loading="lazy" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="images/galeria-interiores-1.webp" alt="Interiores de la casa de campo en Cieneguilla: habitaciones, sala y cocina" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </picture>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                            <span class="text-white font-bold text-xl leading-tight">Interiores y Descanso <br><span class="text-sm font-normal opacity-80">(Habitaciones, sala y cocina)</span></span>
-                            <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
-                        </div>
-                    </div>
+                        <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                            <span class="text-white font-bold text-xl leading-tight">Interiores y descanso <br><span class="text-sm font-normal opacity-80">(Habitaciones, sala y cocina)</span></span>
+                            <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><svg class="ic w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#images"/></svg> Ver galería</span>
+                        </span>
+                    </button>
 
-                    <div onclick="abrirGaleria('galeria_exteriores')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
+                    <button type="button" data-galeria="galeria_exteriores" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 w-full text-left border-4 border-transparent hover:border-amber-700 focus-visible:border-amber-700 transition-all duration-300">
                         <picture class="absolute inset-0 w-full h-full block">
                             <source media="(max-width: 768px)" srcset="images/galeria-exteriores-1-small.webp">
-                            <img src="images/galeria-exteriores-1.webp" alt="Piscina y exteriores de la casa" loading="lazy" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="images/galeria-exteriores-1.webp" alt="Piscina y jardines exteriores de la casa de campo" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </picture>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                            <span class="text-white font-bold text-xl leading-tight">Piscina y Naturaleza <br><span class="text-sm font-normal opacity-80">(Jardines y fachada)</span></span>
-                            <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
-                        </div>
-                    </div>
+                        <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                            <span class="text-white font-bold text-xl leading-tight">Piscina y naturaleza <br><span class="text-sm font-normal opacity-80">(Jardines y fachada)</span></span>
+                            <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><svg class="ic w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#images"/></svg> Ver galería</span>
+                        </span>
+                    </button>
 
-                    <div onclick="abrirGaleria('galeria_diversion')" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 cursor-pointer border-4 border-transparent hover:border-amber-700 transition-all duration-300">
+                    <button type="button" data-galeria="galeria_diversion" class="group relative rounded-3xl overflow-hidden shadow-xl h-72 w-full text-left border-4 border-transparent hover:border-amber-700 focus-visible:border-amber-700 transition-all duration-300">
                         <picture class="absolute inset-0 w-full h-full block">
                             <source media="(max-width: 768px)" srcset="images/galeria-diversion-1-small.webp">
-                            <img src="images/galeria-diversion-1.webp" alt="Zona de diversión y parrilla" loading="lazy" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="images/galeria-diversion-1.webp" alt="Zona de parrilla, juegos y diversión de la casa de campo" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </picture>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                            <span class="text-white font-bold text-xl leading-tight">Parrilla y Diversión <br><span class="text-sm font-normal opacity-80">(Juegos, hornos y eventos)</span></span>
-                            <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><i data-lucide="images" class="w-4 h-4"></i> Ver galería</span>
-                        </div>
-                    </div>
+                        <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                            <span class="text-white font-bold text-xl leading-tight">Parrilla y diversión <br><span class="text-sm font-normal opacity-80">(Juegos, hornos y celebraciones)</span></span>
+                            <span class="text-amber-400 font-bold text-sm flex items-center gap-1 mt-2"><svg class="ic w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><use href="#images"/></svg> Ver galería</span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- MAPA UBICACIÓN -->
-        <section class="py-24 bg-white">
+        <!-- Ubicación -->
+        <section id="como-llegar" class="scroll-mt-20 py-24 bg-white">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-stone-900">Ubicación Privilegiada</h2>
-                    <p class="text-lg text-stone-600 mt-4">Encuéntranos fácilmente en Cieneguilla. De fácil acceso y diseñado para tu total tranquilidad.</p>
+                    <h2 class="text-4xl font-extrabold text-stone-900">Cómo llegar a la casa de campo en Cieneguilla</h2>
+                    <p class="text-lg text-stone-600 mt-4">Estamos en Cieneguilla, Lima, a no más de 10 minutos del Óvalo de Cieneguilla. Abre la ubicación en Google Maps y traza tu ruta.</p>
                 </div>
-                
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-100 h-[400px] mb-8 relative group cursor-pointer text-center">
-                    <a href="https://maps.app.goo.gl/4AYHBnVbuZXCKaDM7?g_st=ac" target="_blank" aria-label="Ver ubicación en Google Maps" class="block w-full h-full">
+
+                <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-100 h-[400px] mb-8 relative group text-center">
+                    <a href="https://maps.app.goo.gl/4AYHBnVbuZXCKaDM7?g_st=ac" target="_blank" rel="noopener" aria-label="Ver la ubicación de la casa de campo en Google Maps" class="block w-full h-full">
                         <picture class="block w-full h-full">
                             <source media="(max-width: 768px)" srcset="images/fachada-small.webp">
-                            <img src="images/fachada.webp" alt="Fachada de la casa de campo" loading="lazy" width="800" height="400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="images/fachada.webp" alt="Fachada de la casa de campo en Cieneguilla" loading="lazy" decoding="async" width="800" height="400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </picture>
-                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center transition-opacity duration-300">
-                            <span class="bg-amber-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 shadow-lg hover:bg-amber-800 transition-colors">
-                                <i data-lucide="map-pin"></i> Ver en Google Maps
+                        <span class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                            <span class="bg-amber-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 shadow-lg group-hover:bg-amber-800 transition-colors">
+                                <svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#map-pin"/></svg> Ver en Google Maps
                             </span>
-                        </div>
+                        </span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- MODAL (Ventana de galería) -->
-        <div id="modal-galeria" class="hidden fixed inset-0 z-[110] bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-sm">
-            <button onclick="cerrarGaleria()" aria-label="Cerrar galería de fotos" class="absolute top-6 right-6 text-white hover:text-amber-500 transition-colors z-50"><i data-lucide="x-circle" class="w-12 h-12 drop-shadow-md"></i></button>
-            <div class="absolute top-20 text-white/60 text-sm flex items-center gap-2 animate-pulse md:hidden font-medium"><i data-lucide="move-horizontal" class="w-5 h-5"></i> Desliza la foto</div>
-            <button onclick="cambiarFotoModal(-1)" aria-label="Ver foto anterior" class="hidden md:block absolute left-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-50"><i data-lucide="chevron-left" class="w-16 h-16 drop-shadow-lg"></i></button>
-            <button onclick="cambiarFotoModal(1)" aria-label="Ver siguiente foto" class="hidden md:block absolute right-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-50"><i data-lucide="chevron-right" class="w-16 h-16 drop-shadow-lg"></i></button>
-            <div class="w-full max-w-5xl h-[50vh] sm:h-[65vh] flex items-center justify-center mb-4 mt-12 sm:mt-0 overflow-hidden relative" id="contenedor-foto-principal">
-                <img id="foto-principal-modal" src="" alt="Vista ampliada de la casa" class="max-h-full max-w-full object-contain rounded-lg shadow-2xl transition-all duration-300">
-            </div>
-            <div class="text-white/70 text-xs mb-3 flex items-center gap-2 md:hidden"><i data-lucide="hand" class="w-4 h-4"></i> Desliza las miniaturas para ver más</div>
-            <div id="contenedor-miniaturas" class="flex gap-4 overflow-x-auto p-4 w-full max-w-5xl scrollbar-visible snap-x"></div>
-        </div>
-
-        <section class="max-w-5xl mx-auto px-4 py-24">
+        <!-- Tarifas -->
+        <section id="tarifas" class="scroll-mt-20 max-w-5xl mx-auto px-4 py-24">
             <div class="text-center mb-10">
-                <h2 class="text-4xl font-extrabold text-stone-900">Tarifas de Temporada</h2>
-                <p class="text-stone-500 mt-4 text-lg">Reserva con anticipación y obtén precios especiales consultando tus días disponibles.</p>
+                <h2 class="text-4xl font-extrabold text-stone-900">Tarifas de alquiler</h2>
+                <p class="text-stone-600 mt-4 text-lg">Reserva con anticipación y consulta por WhatsApp los días disponibles y los precios especiales.</p>
             </div>
-            <div class="flex justify-center mb-12"><span class="inline-flex items-center gap-2 bg-stone-200 text-stone-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm"><i data-lucide="receipt" class="w-4 h-4 text-stone-500"></i> Emitimos Boleta de Venta 🧾</span></div>
+            <div class="flex justify-center mb-12"><span class="inline-flex items-center gap-2 bg-stone-200 text-stone-700 px-5 py-2 rounded-full text-sm font-bold shadow-sm"><svg class="ic w-4 h-4 text-stone-500" viewBox="0 0 24 24" aria-hidden="true"><use href="#receipt"/></svg> Emitimos boleta de venta electrónica</span></div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                 <div class="bg-white p-8 md:p-10 rounded-3xl border border-stone-200 shadow-lg relative flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-bold text-stone-800">Full Day (1 Día)</h3>
-                        <p class="text-amber-700 font-bold mt-1">Días Particulares</p>
-                        <div class="mt-8"><span class="block text-stone-600 text-sm font-bold uppercase tracking-wider mb-1">Desde</span><div class="flex flex-col sm:flex-row items-start sm:items-baseline sm:gap-2"><span class="text-6xl font-black text-stone-900 leading-none">S/ 700</span><span class="text-stone-500 font-medium text-lg sm:text-base mt-2 sm:mt-0">/ día</span></div></div>
-                        <p class="text-stone-600 mt-6">Ideal para un escape total a mitad de semana con total privacidad y relax.</p>
+                        <h3 class="text-2xl font-bold text-stone-800">Full Day (1 día)</h3>
+                        <p class="text-amber-700 font-bold mt-1">Días particulares (entre semana)</p>
+                        <div class="mt-8"><span class="block text-stone-600 text-sm font-bold uppercase tracking-wider mb-1">Desde</span><div class="flex flex-col sm:flex-row items-start sm:items-baseline sm:gap-2"><span class="text-6xl font-black text-stone-900 leading-none">S/ 500</span><span class="text-stone-600 font-medium text-lg sm:text-base mt-2 sm:mt-0">/ día</span></div></div>
+                        <p class="text-stone-600 mt-6">Ideal para una escapada entre semana, con total privacidad y relax.</p>
                     </div>
-                    <a href="https://wa.me/51959571464?text=Hola!%20Quiero%20hacer%20mi%20reserva%20para%20un%20Full%20Day%20(D%C3%ADas%20Particulares)." target="_blank" onclick="fbq('track', 'Lead');" class="animacion-latido block w-full text-center bg-stone-800 hover:bg-stone-900 text-white font-bold py-4 rounded-xl mt-8 transition-colors shadow-lg">Consultar Fechas</a>
+                    <a href="https://wa.me/51959571464?text=Hola!%20Quiero%20hacer%20mi%20reserva%20para%20un%20Full%20Day%20(D%C3%ADas%20Particulares)." target="_blank" rel="noopener" data-wa class="block w-full text-center bg-stone-800 hover:bg-stone-900 text-white font-bold py-4 rounded-xl mt-8 transition-colors shadow-lg">Consultar fechas</a>
                 </div>
 
                 <div class="bg-[#2D1A11] p-8 md:p-10 rounded-3xl shadow-2xl relative border border-[#4E342E] flex flex-col justify-between mt-6 md:mt-0">
                     <span class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-700 text-white font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-md text-sm whitespace-nowrap">¡El más buscado!</span>
                     <div>
-                        <h3 class="text-2xl font-bold text-white mt-2">Fin de Semana</h3>
-                        <p class="text-amber-500 font-bold mt-1">Sábado y Domingo (2 Días, 1 Noche)</p>
-                        <div class="mt-8"><span class="block text-stone-400 text-sm font-bold uppercase tracking-wider mb-1">Desde</span><div class="flex flex-col sm:flex-row items-start sm:items-baseline sm:gap-2"><span class="text-6xl font-black text-white leading-none">S/ 1400</span><span class="text-stone-300 font-medium text-lg sm:text-base mt-2 sm:mt-0">/ paquete total</span></div></div>
-                        <p class="text-stone-300 mt-6">Disfruta el fin de semana a tiempo completo con familiares o amigos.</p>
+                        <h3 class="text-2xl font-bold text-white mt-2">Fin de semana</h3>
+                        <p class="text-amber-500 font-bold mt-1">Sábado y domingo (2 días, 1 noche)</p>
+                        <div class="mt-8"><span class="block text-stone-300 text-sm font-bold uppercase tracking-wider mb-1">Desde</span><div class="flex flex-col sm:flex-row items-start sm:items-baseline sm:gap-2"><span class="text-6xl font-black text-white leading-none">S/ 1400</span><span class="text-stone-300 font-medium text-lg sm:text-base mt-2 sm:mt-0">/ paquete total</span></div></div>
+                        <p class="text-stone-300 mt-6">Disfruta el fin de semana completo con tu familia o amigos.</p>
                     </div>
-                    <a href="https://wa.me/51959571464?text=Hola!%20Quiero%20hacer%20mi%20reserva%20para%20un%20Fin%20de%20Semana." target="_blank" onclick="fbq('track', 'Lead');" class="animacion-latido block w-full text-center bg-amber-700 hover:bg-amber-800 text-white font-extrabold py-4 rounded-xl mt-8 shadow-[0_0_20px_rgba(217,119,6,0.4)] transition-colors">Reservar Fin de Semana</a>
+                    <a href="https://wa.me/51959571464?text=Hola!%20Quiero%20hacer%20mi%20reserva%20para%20un%20Fin%20de%20Semana." target="_blank" rel="noopener" data-wa class="animacion-latido block w-full text-center bg-amber-700 hover:bg-amber-800 text-white font-extrabold py-4 rounded-xl mt-8 shadow-[0_0_20px_rgba(217,119,6,0.4)] transition-colors">Reservar fin de semana</a>
+                </div>
+            </div>
+            <p class="text-center text-sm text-stone-600 mt-8">Los precios son referenciales ("desde") y todo es flexible: escríbenos por WhatsApp y vemos la mejor opción según tu fecha y el tamaño de tu grupo. El adelanto para separar tu fecha también lo conversamos contigo por WhatsApp; puedes revisar los <a href="terminos.html" class="underline text-amber-800 hover:text-amber-900">términos y condiciones</a>.</p>
+        </section>
+
+        <!-- Preguntas frecuentes -->
+        <section id="preguntas-frecuentes" class="scroll-mt-20 bg-white py-24 border-y border-stone-200">
+            <div class="max-w-3xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-stone-900">Preguntas frecuentes</h2>
+                    <p class="text-lg text-stone-600 mt-4">Lo que más nos preguntan antes de alquilar la casa de campo en Cieneguilla. Y recuerda: todo es flexible, lo conversamos por WhatsApp y buscamos la mejor opción para tu grupo.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Cuánto cuesta alquilar la casa de campo?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">El Full Day (1 día) entre semana parte desde S/ 500 y el paquete de fin de semana (sábado y domingo, 1 noche) desde S/ 1,400. Son precios referenciales: escríbenos por WhatsApp con tu fecha y la cantidad de personas, y te confirmamos disponibilidad y precio final.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Cómo reservo mi fecha?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Reservas directamente por WhatsApp: nos escribes con tu fecha y la cantidad de personas, confirmamos la disponibilidad y coordinamos un adelanto para separar tu fecha. No manejamos montos fijos: el adelanto y la forma de pago son flexibles y los conversamos contigo según tu fecha y tu grupo.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Se pueden hacer bautizos, cumpleaños, fiestas o bodas?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Sí. En la casa se han celebrado bautizos, cumpleaños, fiestas, reuniones privadas y fiestas de boda. Somos flexibles y siempre llegamos a un acuerdo si nos comunicas con anticipación qué vas a celebrar y cuántas personas serán. La casa tiene pinturas artesanales hechas por jóvenes artistas, a quienes pagamos por su trabajo y que le dan vida a cada ambiente; lo único que pedimos es cuidar la casa y sus detalles, sin maltratarla ni destruirla.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Cuántas personas pueden ir?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Alquilamos para grupos de hasta 20 personas. Si tu grupo es más pequeño, más grande o necesitas otra distribución, escríbenos por WhatsApp y vemos la mejor opción. Solo te pedimos avisar antes si habrá personas adicionales.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Cuántas habitaciones y camas hay?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">La casa tiene 5 habitaciones cómodas, con baños con agua caliente. La cantidad de camas y cómo se distribuyen las personas es flexible: cuéntanos cuántos van y lo coordinamos por WhatsApp.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿La casa es privada o se comparte con otros huéspedes?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Es de uso exclusivo: alquilas la casa completa, con sus 1,000 m² de jardines, piscina y áreas sociales, rodeada de árboles para tener total privacidad.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Con qué instalaciones cuenta?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Piscina de 10 × 4.5 m con baños exteriores, jardines con zona de hamacas, parrilla, horno de barro, caja china, cocina exterior industrial y cocina interior equipada, refrigeradora y congeladoras, mesa de billar, juego de sapo, saltarín para niños, equipo de sonido con Smart TV, cochera privada y 5 habitaciones con baños con agua caliente.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Se pueden llevar mascotas?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Sí, somos pet friendly. El dueño se encarga de recoger los desechos y se responsabiliza por cualquier daño que ocasione su mascota.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Qué pasa si tengo que cancelar?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Avísanos lo antes posible por WhatsApp. Como la fecha queda bloqueada para ti, vemos juntos la mejor solución según lo acordado y la anticipación con que nos avises, por ejemplo reprogramar tu fecha. Puedes ver los detalles en los <a href="terminos.html" class="underline text-amber-800 hover:text-amber-900">términos y condiciones</a>.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Se pide garantía?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Por lo general sí: al ingresar se solicita un depósito de garantía (el monto lo coordinamos contigo) que se devuelve íntegro al salir, previa revisión de las instalaciones. Si hay daños o pérdidas, se descuentan de la garantía.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Entregan comprobante de pago?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Sí, emitimos boleta de venta electrónica.</p>
+                    </details>
+                    <details class="group bg-[#FAFAF9] border border-stone-200 rounded-2xl">
+                        <summary class="flex items-center justify-between gap-4 cursor-pointer p-5 font-bold text-stone-900 rounded-2xl focus-visible:ring-2 focus-visible:ring-amber-600 outline-none">¿Dónde queda la casa de campo?<svg class="ic w-5 h-5 shrink-0 text-amber-700 transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-down"/></svg></summary>
+                        <p class="px-5 pb-5 text-stone-600">Estamos en Cieneguilla, Lima, a no más de 10 minutos del Óvalo de Cieneguilla. En la sección <a href="#como-llegar" class="underline text-amber-800 hover:text-amber-900">Cómo llegar</a> puedes abrir la ubicación en Google Maps y ver la ruta desde tu punto de partida.</p>
+                    </details>
                 </div>
             </div>
         </section>
+
+        <!-- Visor de fotos: pantalla completa con zoom (galerías y carruseles) -->
+        <div id="visor" class="visor" role="dialog" aria-modal="true" aria-label="Visor de fotos" hidden>
+            <div class="visor-barra">
+                <span id="visor-contador" class="visor-contador" aria-live="polite"></span>
+                <div class="visor-acciones">
+                    <button type="button" class="visor-btn" data-zoom="out" aria-label="Alejar"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#zoom-out"/></svg></button>
+                    <button type="button" class="visor-btn" data-zoom="in" aria-label="Acercar"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#zoom-in"/></svg></button>
+                    <button type="button" class="visor-btn" data-pantalla aria-label="Pantalla completa del navegador" hidden><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#fullscreen"/></svg></button>
+                    <button type="button" class="visor-btn" data-cerrar-galeria aria-label="Cerrar el visor de fotos"><svg class="ic w-6 h-6" viewBox="0 0 24 24" aria-hidden="true"><use href="#x"/></svg></button>
+                </div>
+            </div>
+            <div id="visor-escenario" class="visor-escenario">
+                <img id="visor-img" class="visor-img visor-cargando" alt="Vista ampliada de la casa de campo" draggable="false">
+                <button type="button" class="visor-flecha visor-flecha-izq" data-nav-galeria="-1" aria-label="Ver foto anterior"><svg class="ic w-8 h-8" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-left"/></svg></button>
+                <button type="button" class="visor-flecha visor-flecha-der" data-nav-galeria="1" aria-label="Ver foto siguiente"><svg class="ic w-8 h-8" viewBox="0 0 24 24" aria-hidden="true"><use href="#chevron-right"/></svg></button>
+                <p id="visor-ayuda" class="visor-ayuda"><span class="solo-tactil">Pellizca para hacer zoom · desliza para cambiar de foto</span><span class="solo-raton">Rueda del mouse (o Ctrl + rueda) para hacer zoom · doble clic para acercar</span></p>
+            </div>
+            <div id="visor-miniaturas" class="visor-miniaturas"></div>
+        </div>
     </main>
 
     <footer class="bg-[#1A0F0A] text-stone-300 py-12">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8">
                 <div class="text-center md:text-left">
-                    <p class="text-white font-bold text-xl tracking-wide">Casa de campo en Cieneguilla</p>
-                    <p class="text-sm mt-2">El portal definitivo para tus días de descanso.</p>
+                    <p class="text-white font-bold text-xl tracking-wide">Casa de Campo en Cieneguilla</p>
+                    <p class="text-sm mt-2">Casa de campo privada con piscina, parrilla y 5 habitaciones en Cieneguilla, Lima.</p>
                 </div>
                 <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm">
-                    <span class="flex items-center gap-2"><i data-lucide="phone" class="w-5 h-5 text-amber-600"></i> 959 571 464</span>
-                    <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-amber-600"></i> Cieneguilla, Lima, Perú</span>
+                    <a href="tel:+51959571464" class="flex items-center gap-2 hover:text-white"><svg class="ic w-5 h-5 text-amber-600" viewBox="0 0 24 24" aria-hidden="true"><use href="#phone"/></svg> 959 571 464</a>
+                    <span class="flex items-center gap-2"><svg class="ic w-5 h-5 text-amber-600" viewBox="0 0 24 24" aria-hidden="true"><use href="#map-pin"/></svg> Cieneguilla, Lima, Perú</span>
                 </div>
             </div>
             <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-stone-400 gap-4 text-center md:text-left">
                 <div class="flex flex-col gap-2">
-                    <p>© 2026 Casa de campo en Cieneguilla. Todos los derechos reservados.</p>
-                    <p class="font-bold text-stone-400">RUC: 10420042821</p>
+                    <p>© 2026 Casa de Campo en Cieneguilla. Todos los derechos reservados.</p>
+                    <p class="font-bold">RUC: 10420042821</p>
                 </div>
-                <div class="flex flex-wrap justify-center gap-4 mt-4 md:mt-0">
-                    <a href="terminos.html" class="hover:text-stone-200 transition-colors">Términos y Condiciones</a><span class="hidden sm:inline">|</span>
-                    <a href="privacidad.html" class="hover:text-stone-200 transition-colors">Política de Privacidad (Ley N° 29733)</a><span class="hidden sm:inline">|</span>
-                    <a href="reclamaciones.html" class="hover:text-stone-200 transition-colors flex items-center gap-1"><i data-lucide="book-open" class="w-3 h-3"></i> Libro de Reclamaciones</a>
+                <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mt-4 md:mt-0">
+                    <a href="terminos.html" class="hover:text-stone-200 transition-colors">Términos y condiciones</a><span class="hidden sm:inline" aria-hidden="true">|</span>
+                    <a href="privacidad.html" class="hover:text-stone-200 transition-colors">Política de privacidad (Ley N° 29733)</a><span class="hidden sm:inline" aria-hidden="true">|</span>
+                    <button type="button" data-abrir-cookies class="hover:text-stone-200 transition-colors underline">Configurar cookies</button><span class="hidden sm:inline" aria-hidden="true">|</span>
+                    <a href="reclamaciones.html" class="hover:text-stone-200 transition-colors flex items-center gap-1"><svg class="ic w-3 h-3" viewBox="0 0 24 24" aria-hidden="true"><use href="#book-open"/></svg> Libro de reclamaciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-        });
-
-        function gestionarCookies(aceptadas) {
-            localStorage.setItem('cookies_aceptadas', aceptadas ? 'true' : 'false');
-            const banner = document.getElementById('cookie-banner');
-            if (banner) banner.classList.add('translate-y-full');
-        }
-
-        if (!localStorage.getItem('cookies_aceptadas')) {
-            setTimeout(() => {
-                const banner = document.getElementById('cookie-banner');
-                if (banner) banner.classList.remove('translate-y-full');
-            }, 2000);
-        }
-
-        setTimeout(() => {
-            const tooltip = document.getElementById('tooltip-wsp');
-            if(tooltip && !localStorage.getItem('wsp_tooltip_cerrado')) {
-                tooltip.classList.remove('scale-0', 'opacity-0', 'pointer-events-none');
-                tooltip.classList.add('scale-100', 'opacity-100', 'pointer-events-auto');
-            }
-        }, 30000); 
-
-        function cerrarTooltip() {
-            const tooltip = document.getElementById('tooltip-wsp');
-            if(tooltip) {
-                tooltip.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto');
-                tooltip.classList.add('scale-0', 'opacity-0', 'pointer-events-none');
-                localStorage.setItem('wsp_tooltip_cerrado', 'true'); 
-            }
-        }
-
-        const observadorAmague = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const carrusel = entry.target;
-                    if (!carrusel.dataset.amagueRealizado) {
-                        carrusel.dataset.amagueRealizado = 'true';
-                        setTimeout(() => {
-                            if (carrusel.scrollLeft < 10) {
-                                carrusel.classList.add('ejecutar-amague');
-                                const cartelito = document.getElementById('hint-' + carrusel.id.split('-')[1]);
-                                if (cartelito) {
-                                    cartelito.innerHTML = '<i data-lucide="hand" class="w-6 h-6 animate-pulse"></i> Desliza';
-                                    if(typeof lucide !== 'undefined') lucide.createIcons();
-                                    cartelito.classList.replace('opacity-0', 'opacity-100');
-                                    setTimeout(() => cartelito.classList.replace('opacity-100', 'opacity-0'), 2000);
-                                }
-                                setTimeout(() => { carrusel.classList.remove('ejecutar-amague'); }, 1400);
-                            }
-                        }, 1200);
-                    }
-                }
-            });
-        }, { threshold: 0.5 });
-
-        ['carrusel-relax', 'carrusel-cocina', 'carrusel-diversion'].forEach(id => {
-            const el = document.getElementById(id);
-            if (el) observadorAmague.observe(el);
-        });
-
-        function moverCarrusel(id, direccion) {
-            const carrusel = document.getElementById(id);
-            if(!carrusel) return;
-            const cantidadMover = carrusel.clientWidth;
-            carrusel.style.scrollBehavior = 'smooth';
-            carrusel.scrollBy({ left: cantidadMover * direccion, behavior: 'smooth' });
-        }
-
-        const cantidadDeFotos = { galeria_interiores: 7, galeria_exteriores: 7, galeria_diversion: 4 };
-
-        const configuracionFotos = {
-            galeria_interiores: Array.from({length: cantidadDeFotos.galeria_interiores}, (_, i) => `images/galeria-interiores-${i+1}.webp`),
-            galeria_exteriores: Array.from({length: cantidadDeFotos.galeria_exteriores}, (_, i) => `images/galeria-exteriores-${i+1}.webp`),
-            galeria_diversion: Array.from({length: cantidadDeFotos.galeria_diversion}, (_, i) => `images/galeria-diversion-${i+1}.webp`)
-        };
-
-        const modal = document.getElementById('modal-galeria');
-        const imgModal = document.getElementById('foto-principal-modal');
-        const contFoto = document.getElementById('contenedor-foto-principal');
-        const contenedorMiniaturas = document.getElementById('contenedor-miniaturas');
-        let fotosActualesModal = [];
-        let indiceActualModal = 0;
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        contFoto.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
-        contFoto.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            if (touchStartX - touchEndX > 40) cambiarFotoModal(1);
-            if (touchEndX - touchStartX > 40) cambiarFotoModal(-1);
-        }, {passive: true});
-
-        function abrirGaleria(categoria) {
-            contenedorMiniaturas.innerHTML = '';
-            fotosActualesModal = configuracionFotos[categoria];
-            indiceActualModal = 0;
-            
-            fotosActualesModal.forEach((ruta, index) => {
-                const img = document.createElement('img');
-                img.src = ruta; 
-                img.alt = "Vista en miniatura de la casa";
-                img.loading = "lazy";
-                img.className = 'w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-xl cursor-pointer border-4 transition-all shadow-md flex-shrink-0 snap-center ' + 
-                                (index === 0 ? 'border-amber-700 opacity-100' : 'border-transparent opacity-50 hover:opacity-100');
-                img.onclick = () => { 
-                    indiceActualModal = index;
-                    actualizarVistaModal(); 
-                };
-                contenedorMiniaturas.appendChild(img);
-            });
-
-            imgModal.src = fotosActualesModal[0];
-            modal.classList.remove('hidden');
-        }
-
-        function cambiarFotoModal(direccion) {
-            indiceActualModal += direccion;
-            if (indiceActualModal >= fotosActualesModal.length) indiceActualModal = 0;
-            if (indiceActualModal < 0) indiceActualModal = fotosActualesModal.length - 1;
-            actualizarVistaModal();
-        }
-
-        function actualizarVistaModal() {
-            imgModal.style.opacity = '0';
-            setTimeout(() => {
-                imgModal.src = fotosActualesModal[indiceActualModal];
-                imgModal.style.opacity = '1';
-            }, 150);
-
-            const minis = contenedorMiniaturas.children;
-            for(let i=0; i<minis.length; i++) {
-                minis[i].classList.replace('opacity-100', 'opacity-50');
-                minis[i].classList.replace('border-amber-700', 'border-transparent');
-            }
-            if(minis[indiceActualModal]) {
-                minis[indiceActualModal].classList.replace('opacity-50', 'opacity-100');
-                minis[indiceActualModal].classList.replace('border-transparent', 'border-amber-700');
-                minis[indiceActualModal].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
-        }
-
-        function cerrarGaleria() {
-            modal.classList.add('hidden');
-        }
-    </script>
+    <script src="js/app.js?v=2" defer></script>
 </body>
 </html>
