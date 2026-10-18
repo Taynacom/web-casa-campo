@@ -1,5 +1,12 @@
 # Web casa de campo en Cieneguilla — cómo subir esta versión
 
+## 0000. Cambios de la v5
+- Título nuevo "Alquiler de casa de campo, solo para tu grupo"; "Cómo llegar" como título de la sección de ubicación; se corrigió el punto suelto en el enlace de la portada.
+
+## 000. Cambios de la v4
+- Se usó tu index.html editado como base (tus cambios se respetaron).
+- Datos estructurados: FAQPage (preguntas frecuentes) y mención de "casa campestre" en el esquema y en una respuesta.
+
 ## 00. Cambios de la v3
 - Se quitó la sección "Eventos" (y su enlace del menú); la información quedó en Preguntas frecuentes.
 - Se quitó "a no más de 10 minutos del Óvalo" de la descripción inicial.
